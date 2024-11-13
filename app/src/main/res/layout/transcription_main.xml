@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6B7683"
+    android:id="@+id/transcription_main"
+    tools:context=".MainActivity">
+
+    <!-- Menú de configuración (esquina superior izquierda) -->
+    <ImageButton
+        android:id="@+id/menu_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="0dp"
+        android:src="@drawable/ic_menu"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <!-- Título de la aplicación -->
+    <TextView
+        style="@style/Titulo_Aplicacion"
+        android:text="AUDIO-HELP" />
+
+    <!-- Indicador de página -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!-- Puntos de paginación -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_inactive"
+            android:layout_marginEnd="4dp" />
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_active"
+            android:layout_marginEnd="4dp" />
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_inactive" />
+    </LinearLayout>
+
+    <!-- Texto "Transcripción" -->
+    <TextView
+        style="@style/Letra_Normal"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:text="Transcripción" />
+
+
+    <!-- Botón de transcripción (icono grande en el centro) -->
+    <ImageButton
+        android:id="@+id/transcription_button"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/boton_circular"
+        android:src="@drawable/ic_transcription"
+        android:scaleType="centerInside"
+        android:padding="50dp"/>
+
+    <!-- Opciones inferiores: Llamada de emergencia y Transcripciones guardadas -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Llamada de emergencia -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="40dp">
+
+            <ImageButton
+                android:id="@+id/emergency_call_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_emergency_call"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+                style="@style/Letra_Pequena"
+                android:text="Llamada\nde Emergencia"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Transcripciones guardadas -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/saved_transcriptions_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_saved_transcriptions"
+                android:background="?android:attr/selectableItemBackground" />
+
+            <TextView
+                style="@style/Letra_Pequena"
+                android:text="Transcripciones\nGuardadas"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

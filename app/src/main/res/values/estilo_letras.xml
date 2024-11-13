@@ -1,0 +1,26 @@
+<!-- Archivo: res/values/estilo_letras.xml -->
+<resources>
+    <style name="Titulo_Aplicacion">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:textColor">#CED8FB</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Letra_Normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="Letra_Pequena">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
+
+
