@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TranscriptionActivity" />
+        <activity android:name=".ajustes" />
 
     </application>
 

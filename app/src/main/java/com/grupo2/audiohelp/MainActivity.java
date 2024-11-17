@@ -29,13 +29,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                // inicia la actividad de transcripcion
-                Intent intent = new Intent(MainActivity.this, TranscriptionActivity.class);
+                // inicia la actividad
+                Intent intent = new Intent(MainActivity.this, ajustes.class);
                 startActivity(intent);
             }
         });
-
-        String filePath = "app/sampledata/hola.mp3";
-        WhisperTranscription.transcribeAudio(filePath);
     }
 }

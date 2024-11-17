@@ -7,6 +7,6 @@ public class ajustes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ajustes_main); // Enlaza con transcription_main.xml
+        setContentView(R.layout.ajustes);
     }
 }
