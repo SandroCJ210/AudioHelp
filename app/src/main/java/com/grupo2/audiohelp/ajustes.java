@@ -1,4 +1,12 @@
 package com.grupo2.audiohelp;
 
-public class ajustes {
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ajustes extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.ajustes_main); // Enlaza con transcription_main.xml
+    }
 }
