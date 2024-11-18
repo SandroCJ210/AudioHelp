@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6B7683"
+    android:id="@+id/ajustes_main"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <!-- Título de la aplicación -->
+    <TextView
+        style="@style/Titulo_Aplicacion"
+        android:background="#00CDD7F9"
+        android:text="AUDIO-HELP"
+        android:textSize="30sp" />
+
+    <TextView
+        style="@style/Letra_Normal"
+        android:background="#00CDD7F9"
+        android:text="Transcripción"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        android:textSize="40sp" />
+
+
+    <!-- Indicador de página -->
+    <LinearLayout
+        android:id="@+id/indicador_indice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!-- Puntos de paginación -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_inactive"
+            android:layout_marginEnd="4dp" />
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_active"
+            android:layout_marginEnd="4dp" />
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/indicator_inactive" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/transcriptionBox"
+        android:layout_width="360dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="160dp"
+        android:layout_centerHorizontal="true"
+        android:background="#334455"
+        android:gravity="top"
+        android:hint="Aquí aparecerá la transcripción..."
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:overScrollMode="always"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/white"
+        android:textCursorDrawable="@null"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- transcripciones guardadas -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="40dp">
+
+            <ImageButton
+                android:id="@+id/transcripciones_guardadas"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_guardados"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+
+        <!-- frases guardadas -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginEnd="40dp">
+
+            <ImageButton
+                android:id="@+id/frases_guardadas"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_frases_guardadas" />
+        </LinearLayout>
+
+        <!-- compartir transcripcion -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/compartir_transcripcion"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_compartir"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/cerrar_transcripcion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="650dp"
+        android:src="@drawable/ic_cerrar"
+        android:scaleType="centerInside"
+        android:background="?android:attr/selectableItemBackground"/>
+
+</RelativeLayout>
