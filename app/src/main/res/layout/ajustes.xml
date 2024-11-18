@@ -3,61 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6B7683"
     android:orientation="vertical"
-    android:background="#2D3E4F"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="44dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
+        android:background="#6B7683"
+        android:src="android:@drawable/ic_menu_reverse" />
 
 
     <TextView
         android:id="@+id/title_config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="start"
         android:text="@string/title_config"
-        android:textSize="24sp"
-        android:textColor="#AFCFFB"
-        android:layout_gravity="start" />
+        android:layout_marginTop="20dp"
+        android:textColor="#CDD7F9"
+        android:textSize="30sp" />
 
     <!-- Fuente -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#5F6778"
             android:text="@string/font"
-            android:textColor="#AFCFFB"
+            android:textColor="#CDD7F9"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#5F6778"
             android:text="@string/font_description"
-            android:textColor="#87B2E1"
+            android:textColor="#333A3F"
             android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#5F6778"
             android:text="@string/color_theme"
-            android:textColor="#AFCFFB"
+            android:textColor="#CDD7F9"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#5F6778"
             android:text="@string/material_theme"
-            android:textColor="#87B2E1"
+            android:textColor="#333A3F"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -65,16 +81,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="16dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#5F6778"
             android:text="@string/background_mode"
-            android:textColor="#AFCFFB"
+            android:textColor="#CDD7F9"
             android:textSize="16sp" />
 
     </LinearLayout>
@@ -82,16 +99,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="8dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#5F6778"
             android:text="@string/autocorrect"
-            android:textColor="#AFCFFB"
+            android:textColor="#CDD7F9"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -99,23 +117,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="8dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#5F6778"
             android:text="@string/voice_sound"
-            android:textColor="#AFCFFB"
+            android:textColor="#CDD7F9"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#5F6778"
             android:text="@string/voice_sound_loquendo"
-            android:textColor="#87B2E1"
+            android:textColor="#CDD7F9"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -124,7 +144,7 @@
         android:id="@+id/button_save"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="250dp"
         android:backgroundTint="#333A3F"
         android:text="@string/save_button"
         android:textColor="#FFFFFF" />
@@ -134,10 +154,10 @@
         android:id="@+id/version_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/version_text"
-        android:textSize="12sp"
-        android:textColor="#AFCFFB"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:layout_marginTop="16dp" />
+        android:text="@string/version_text"
+        android:textColor="#49454F"
+        android:textSize="12sp" />
 
 </LinearLayout>

@@ -20,6 +20,7 @@
     <!-- Título de la aplicación -->
     <TextView
         style="@style/Titulo_Aplicacion"
+        android:background="#00CDD7F9"
         android:text="AUDIO-HELP" />
 
     <!-- Indicador de página -->
@@ -50,8 +51,10 @@
     <!-- Texto "Transcripción" -->
     <TextView
         style="@style/Letra_Normal"
-        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:autoText="true"
+        android:background="#0049454F"
         android:text="Transcripción" />
 
 
