@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6B7683"
+    android:id="@+id/ajustes_main"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <!-- Título de la aplicación -->
+
+    <EditText
+        android:id="@+id/locutionBox"
+        android:layout_width="360dp"
+        android:layout_height="380dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:background="#334455"
+        android:backgroundTint="#5E7585"
+        android:gravity="top"
+        android:hint="Escribir..."
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:overScrollMode="always"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/white"
+        android:textCursorDrawable="@null"
+        android:textSize="20sp" />
+
+    <TextView
+        style="@style/Titulo_Aplicacion"
+        android:background="#00CDD7F9"
+        android:text="@string/app_name"
+        android:textSize="30sp" />
+
+    <TextView
+        style="@style/Letra_Normal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+        android:background="#00CDD7F9"
+        android:text="Locución"
+        android:textColor="#CED8FB"
+        android:textSize="40sp" />
+
+
+    <!-- Indicador de página -->
+    <LinearLayout
+        android:id="@+id/indicador_indice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <!-- Puntos de paginación -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/indicator_inactive"
+            android:backgroundTint="#1F364B" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/indicator_active"
+            android:backgroundTint="#FFFFFF" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/indicator_inactive"
+            android:backgroundTint="#1F364B" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/closeLocution"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:contentDescription="@string/Close"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/ic_close" />
+
+    <LinearLayout
+        android:id="@+id/locutionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="110dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Play"
+            app:srcCompat="@drawable/play" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Phrases"
+            app:srcCompat="@drawable/ic_chat_bubble" />
+
+    </LinearLayout>
+
+</RelativeLayout>

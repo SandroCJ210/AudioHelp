@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">AudioHelp</string>
+    <string name="app_name">AUDIO-HELP</string>
+
+    <string name = "Phrases">Frases Destacadas</string>
+    <string name = "Close">Cerrar</string>
+    <string name = "Play">Reproducir</string>
 
     <string name="title_config">Configuración</string>
     <string name="brightness">Brillo</string>
