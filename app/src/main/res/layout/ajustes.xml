@@ -30,7 +30,6 @@
         android:textColor="#CDD7F9"
         android:textSize="30sp" />
 
-    <!-- Fuente -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,13 +51,6 @@
             android:text="@string/font_description"
             android:textColor="#333A3F"
             android:textSize="14sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -75,68 +67,37 @@
             android:text="@string/material_theme"
             android:textColor="#333A3F"
             android:textSize="14sp" />
+
     </LinearLayout>
 
-    <!-- Segundo Plano -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
+        android:layout_height="119dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:background="#5F6778"
             android:text="@string/background_mode"
             android:textColor="#CDD7F9"
             android:textSize="16sp" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:background="#5F6778"
             android:text="@string/autocorrect"
             android:textColor="#CDD7F9"
             android:textSize="16sp" />
-    </LinearLayout>
-
-    <!-- Sonido de Voz -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:background="#5F6778"
             android:text="@string/voice_sound"
             android:textColor="#CDD7F9"
             android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/voice_sound_loquendo"
-            android:textColor="#CDD7F9"
-            android:textSize="14sp" />
     </LinearLayout>
 
     <!-- Botón de Guardar Configuración -->
