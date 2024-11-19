@@ -9,6 +9,8 @@
     <string name="brightness">Brillo</string>
     <string name="font">Fuente</string>
     <string name="font_description">Pequeño, Predeterminado</string>
+    <string name="voices_description">Hombre</string>
+    <string name="correct_description">Habilitado</string>
     <string name="screen_scale">Escala de la Pantalla</string>
     <string name="screen_scale_standard">Estándar</string>
     <string name="color_theme">Color y Tema</string>
@@ -16,8 +18,7 @@
     <string name="background_mode">Segundo Plano</string>
     <string name="autocorrect">Autocorrección</string>
     <string name="voice_sound">Sonido de Voz</string>
-    <string name="voice_sound_loquendo">Loquendo xd</string>
     <string name="save_button">Guardar configuración</string>
-    <string name="version_text">AUDIO-HELP versión 1.0.1</string>
+    <string name="version_text">AUDIO-HELP versión 0.1.2</string>
 
 </resources>
