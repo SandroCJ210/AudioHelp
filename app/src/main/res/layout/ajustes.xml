@@ -1,136 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6B7683"
+    android:background="@drawable/fondo_caja"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:padding="16dp">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="44dp"
-        android:layout_height="30dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="16dp"
-        android:background="#6B7683"
-        android:src="@drawable/ic_menu" />
-
-
+    <!-- Título -->
     <TextView
-        android:id="@+id/title_config"
+        android:id="@+id/textViewTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"
         android:text="@string/title_config"
-        android:layout_marginTop="20dp"
-        android:textColor="#CDD7F9"
-        android:textSize="30sp" />
+        android:textColor="#FCF5FD"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
+    <!-- Botón para cambiar la fuente -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fondo_boton"
+        android:orientation="vertical"
+        android:padding="12dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textTituloFuente"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#5F6778"
             android:text="@string/font"
-            android:textColor="#CDD7F9"
-            android:textSize="16sp" />
+            android:textColor="#FCF5FD"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textDescripcionFuente"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/font_description"
-            android:textColor="#333A3F"
+            android:layout_marginTop="4dp"
+            android:text="Pequeño, Predeterminado"
+            android:textColor="#A1D1FF"
             android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/color_theme"
-            android:textColor="#CDD7F9"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/material_theme"
-            android:textColor="#333A3F"
-            android:textSize="14sp" />
-
     </LinearLayout>
 
+    <!-- Botón para cambiar el color y tema -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="119dp"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fondo_boton"
+        android:orientation="vertical"
+        android:padding="12dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textTituloColorTema"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/background_mode"
-            android:textColor="#CDD7F9"
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/font_description"
-            android:textColor="#333A3F"
-            android:textSize="14sp" />
+            android:text="@string/color_theme"
+            android:textColor="#FCF5FD"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textDescripcionColorTema"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/autocorrect"
-            android:textColor="#CDD7F9"
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/correct_description"
-            android:textColor="#333A3F"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/voice_sound"
-            android:textColor="#CDD7F9"
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#5F6778"
-            android:text="@string/voices_description"
-            android:textColor="#333A3F"
+            android:layout_marginTop="4dp"
+            android:text="Material Theme: Claro/Oscuro"
+            android:textColor="#A1D1FF"
             android:textSize="14sp" />
     </LinearLayout>
 
-    <!-- Botón de Guardar Configuración -->
-    <Button
-        android:id="@+id/button_save"
-        android:layout_width="380dp"
+    <!-- Switch para autocorrección -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:backgroundTint="#333A3F"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/fondo_boton"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/autocorrect"
+            android:textColor="#FCF5FD"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchAutocorreccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FCF5FD" />
+    </LinearLayout>
+
+    <!-- Switch para habilitar el segundo plano -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/fondo_boton"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/background_mode"
+            android:textColor="#FCF5FD"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSegundoPlano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textColor="#FCF5FD" />
+    </LinearLayout>
+
+    <!-- Botón para guardar la configuración -->
+    <Button
+        android:id="@+id/btnGuardarConfiguracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#225C6E"
         android:text="@string/save_button"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FCF5FD" />
 
     <!-- Pie de página -->
     <TextView
@@ -142,5 +142,4 @@
         android:text="@string/version_text"
         android:textColor="#49454F"
         android:textSize="12sp" />
-
 </LinearLayout>
