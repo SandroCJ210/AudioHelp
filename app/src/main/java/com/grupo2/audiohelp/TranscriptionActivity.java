@@ -23,7 +23,7 @@ public class TranscriptionActivity extends AppCompatActivity {
         });
         ImageButton btnMenu = findViewById(R.id.menu_icon);
         btnMenu.setOnClickListener(w -> {
-            Intent intent = new Intent(TranscriptionActivity.this,AjustesMain.class);
+            Intent intent = new Intent(TranscriptionActivity.this,OpcionesActivity.class);
             startActivity(intent);
         });
         Button BtonLocucion = findViewById(R.id.BtnLocucion1);

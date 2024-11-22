@@ -1,13 +1,26 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="#4A5768"
     android:padding="16dp">
 
     <!-- Título -->
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="70dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="150dp"
+        android:background="#4A5768"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
     <TextView
     android:id="@+id/title"
     android:layout_width="wrap_content"
@@ -20,11 +33,14 @@
 
     <!-- Botón: Iniciar sesión -->
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:gravity="center_vertical"
-android:layout_marginBottom="16dp">
+    android:id="@+id/btn_iniciar_sesion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground"
+    android:padding="8dp"
+    android:layout_marginBottom="16dp">
 
 <ImageView
     android:layout_width="40dp"
@@ -43,11 +59,14 @@ android:layout_marginBottom="16dp">
 
     <!-- Botón: Configuración -->
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:gravity="center_vertical"
-android:layout_marginBottom="16dp">
+    android:id="@+id/btn_configuracion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="16dp">
 
 <ImageView
     android:layout_width="40dp"
@@ -66,11 +85,13 @@ android:layout_marginBottom="16dp">
 
     <!-- Botón: Tutorial -->
 <LinearLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal"
-android:gravity="center_vertical"
-android:layout_marginBottom="16dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:padding="8dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="16dp">
 
 <ImageView
     android:layout_width="38dp"

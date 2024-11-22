@@ -110,7 +110,7 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/saved_transcriptions_icon"
+                android:id="@+id/saved_frases_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:scaleType="centerInside"

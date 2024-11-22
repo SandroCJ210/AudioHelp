@@ -24,6 +24,17 @@ public class LocucionActivity extends AppCompatActivity{
             Intent intent = new Intent(LocucionActivity.this,TranscriptionActivity.class);
             startActivity(intent);
         });
+        ImageButton btnMenu = findViewById(R.id.menu_icon);
+        btnMenu.setOnClickListener(w -> {
+            Intent intent = new Intent(LocucionActivity.this,OpcionesActivity.class);
+            startActivity(intent);
+        });
+        ImageButton btnHistorial = findViewById(R.id.saved_frases_icon);
+        btnHistorial.setOnClickListener(w -> {
+            Intent intent = new Intent(LocucionActivity.this,FrasesGuardadasActivity.class);
+            startActivity(intent);
+        });
+
     }
 
 

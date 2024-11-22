@@ -17,5 +17,11 @@ public class TranscriptionActivity_2 extends AppCompatActivity {
             Intent intent = new Intent(TranscriptionActivity_2.this, LocucionActivity_2.class);
             startActivity(intent);
         });
+
+        ImageButton btnCerrar = findViewById(R.id.cerrar_transcripcion);
+        btnCerrar.setOnClickListener(v -> {
+            Intent intent = new Intent(TranscriptionActivity_2.this, TranscriptionActivity.class);
+            startActivity(intent);
+        });
     }
 }
