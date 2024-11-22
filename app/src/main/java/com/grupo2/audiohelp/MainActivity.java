@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // configuracion del boton
+
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                // inicia la actividad
-                Intent intent = new Intent(MainActivity.this, TranscriptionActivity_2.class);
+                Intent intent = new Intent(MainActivity.this, TranscriptionActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 }

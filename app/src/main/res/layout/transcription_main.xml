@@ -60,7 +60,7 @@
 
     <!-- Botón de transcripción (icono grande en el centro) -->
     <ImageButton
-        android:id="@+id/transcription_button"
+        android:id="@+id/locution_button"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
@@ -123,5 +123,21 @@
                 android:gravity="center" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/BtnLocucion1"
+        android:layout_width="45dp"
+        android:layout_height="601dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="139dp"
+        android:layout_marginEnd="-7dp"
+        android:layout_marginBottom="-11dp"
+        android:layout_toEndOf="@+id/locution_button"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/transparent"
+        android:visibility="visible" />
 
 </RelativeLayout>

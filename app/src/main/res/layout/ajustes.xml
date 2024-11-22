@@ -142,4 +142,5 @@
         android:text="@string/version_text"
         android:textColor="#49454F"
         android:textSize="12sp" />
+
 </LinearLayout>
