@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#4A5768"
+    android:padding="16dp">
+
+    <!-- Título -->
+    <TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="OPCIONES"
+    android:textSize="60sp"
+    android:textStyle="bold"
+    android:textColor="#ffffff"
+    android:layout_marginBottom="32dp" />
+
+    <!-- Botón: Iniciar sesión -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center_vertical"
+android:layout_marginBottom="16dp">
+
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:src="@drawable/acceso"
+    android:tint="#000000"
+    android:layout_marginEnd="16dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Iniciar sesión"
+    android:textSize="30sp"
+    android:textColor="#FFFFFF" />
+</LinearLayout>
+
+    <!-- Botón: Configuración -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center_vertical"
+android:layout_marginBottom="16dp">
+
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:src="@drawable/ic_ajustes"
+    android:tint="#000000"
+    android:layout_marginEnd="16dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Configuración"
+    android:textSize="30sp"
+    android:textColor="#FFFFFF" />
+</LinearLayout>
+
+    <!-- Botón: Tutorial -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:gravity="center_vertical"
+android:layout_marginBottom="16dp">
+
+<ImageView
+    android:layout_width="38dp"
+    android:layout_height="38dp"
+    android:src="@drawable/ic_book_open"
+    android:tint="#000000"
+    android:layout_marginEnd="20dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tutorial"
+    android:textSize="30sp"
+    android:textColor="#FFFFFF" />
+</LinearLayout>
+
+    <!-- Versión -->
+<TextView
+android:id="@+id/version"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="versión 1.0.1"
+android:textSize="14sp"
+android:textColor="#E0E0E0"
+android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
