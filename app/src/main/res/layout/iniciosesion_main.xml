@@ -9,7 +9,7 @@
         android:id="@+id/iniciosesion_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#6B7683"
+        android:background="@color/background"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="34dp">
@@ -23,6 +23,7 @@
             android:layout_marginStart="75dp"
             android:layout_marginTop="500dp"
             android:layout_marginEnd="75dp"
+            android:backgroundTint="@color/card"
             android:text="Ingresar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +36,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="500dp"
             android:layout_marginEnd="217dp"
+            android:backgroundTint="@color/card"
             android:text="Registrarse"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,8 +50,9 @@
             android:layout_marginTop="228dp"
             android:layout_marginEnd="116dp"
             android:text="INICIAR SESION"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textColor="@color/primaryText"
+            android:textSize="24sp"
+            tools:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/textViewEmailoUsuario"
@@ -60,7 +63,7 @@
             android:layout_marginTop="296dp"
             android:layout_marginEnd="218dp"
             android:text="Email o Usuario"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
         <TextView
@@ -72,7 +75,7 @@
             android:layout_marginTop="656dp"
             android:layout_marginEnd="148dp"
             android:text="Version 1.0.1"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
         <TextView
@@ -84,7 +87,7 @@
             android:layout_marginTop="386dp"
             android:layout_marginEnd="248dp"
             android:text="Contraseña"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
         <ImageButton
@@ -97,7 +100,7 @@
             android:layout_marginStart="0dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="341dp"
-            android:background="#6B7683"
+            android:background="#006B7683"
             app:srcCompat="@android:drawable/ic_menu_revert" />
 
         <ImageView
@@ -106,8 +109,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="68dp"
             android:layout_marginEnd="141dp"
+            android:tint="@color/primaryText"
             app:srcCompat="@drawable/acceso" />
 
         <EditText
@@ -145,7 +150,7 @@
             android:layout_marginTop="566dp"
             android:layout_marginEnd="98dp"
             android:text="¿Olvidaste tu contraseña?"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
 

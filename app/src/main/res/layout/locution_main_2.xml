@@ -5,7 +5,7 @@
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6B7683"
+    android:background="@color/background"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
@@ -18,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="160dp"
         android:background="#334455"
-        android:backgroundTint="#5E7585"
+        android:backgroundTint="@color/card"
         android:gravity="top"
         android:hint="Escribir..."
         android:imeOptions="actionDone"
@@ -35,6 +35,7 @@
         android:background="#00CDD7F9"
         android:backgroundTint="#FCF5FD"
         android:text="@string/app_name"
+        android:textColor="@color/primaryText"
         android:textSize="30sp" />
 
     <TextView
@@ -43,7 +44,7 @@
         android:layout_marginTop="95dp"
         android:background="#00CDD7F9"
         android:text="Locución"
-        android:textColor="#CED8FB"
+        android:textColor="@color/primaryText"
         android:textSize="40sp" />
 
 
@@ -88,6 +89,7 @@
         android:layout_marginBottom="35dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/Close"
+        android:tint="@color/primaryText"
         app:srcCompat="@drawable/ic_close" />
 
     <LinearLayout
@@ -107,6 +109,7 @@
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/Play"
+            android:tint="@color/primaryText"
             app:srcCompat="@drawable/play" />
 
         <ImageButton
@@ -116,6 +119,7 @@
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/Phrases"
+            android:tint="@color/primaryText"
             app:srcCompat="@drawable/ic_chat_bubble" />
 
     </LinearLayout>

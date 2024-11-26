@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_caja"
+    android:background="@color/background"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/title_config"
-        android:textColor="#FCF5FD"
+        android:textColor="@color/primaryText"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/fondo_boton"
+        android:background="@color/card"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/font"
-            android:textColor="#FCF5FD"
+            android:textColor="@color/primaryText"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Pequeño, Predeterminado"
-            android:textColor="#A1D1FF"
+            android:textColor="@color/secondaryText"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/fondo_boton"
+        android:background="@color/card"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/color_theme"
-            android:textColor="#FCF5FD"
+            android:textColor="@color/primaryText"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Material Theme: Claro/Oscuro"
-            android:textColor="#A1D1FF"
+            android:textColor="@color/secondaryText"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/fondo_boton"
+        android:background="@color/card"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -102,7 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/fondo_boton"
+        android:background="@color/card"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -123,16 +123,16 @@
     </LinearLayout>
 
     <!-- Botón para guardar la configuración -->
-    <Button
-        android:id="@+id/btnGuardarConfiguracion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#225C6E"
-        android:text="@string/save_button"
-        android:textColor="#FCF5FD" />
 
     <!-- Pie de página -->
+
+    <Button
+        android:id="@+id/saveConfigButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/card"
+        android:text="@string/save_button" />
+
     <TextView
         android:id="@+id/version_text"
         android:layout_width="match_parent"

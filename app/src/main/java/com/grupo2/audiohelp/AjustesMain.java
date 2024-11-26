@@ -12,7 +12,7 @@ public class AjustesMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ajustes);
 
-        Button BtonGuardar = findViewById(R.id.btnGuardarConfiguracion);
+        Button BtonGuardar = findViewById(R.id.saveConfigButton);
         BtonGuardar.setOnClickListener(w -> {
             Intent intent = new Intent(AjustesMain.this,OpcionesActivity.class);
             startActivity(intent);

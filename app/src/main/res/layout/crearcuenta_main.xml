@@ -9,7 +9,7 @@
         android:id="@+id/crearcuenta_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#6B7683"
+        android:background="@color/background"
         app:layout_constraintStart_toStartOf="parent"
         tools:context=".MainActivity"
         tools:layout_editor_absoluteY="34dp">
@@ -19,9 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentEnd="false"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="532dp"
             android:layout_marginEnd="140dp"
+            android:backgroundTint="@color/card"
             android:text="Crear Cuenta" />
 
         <TextView
@@ -46,7 +48,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="339dp"
-            android:background="#6B7683"
+            android:background="@color/background"
             app:srcCompat="@android:drawable/ic_menu_revert" />
 
         <TextView
@@ -58,7 +60,7 @@
             android:layout_marginTop="72dp"
             android:layout_marginEnd="120dp"
             android:text="CREAR CUENTA"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="24sp" />
 
         <EditText
@@ -67,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="162dp"
             android:layout_marginEnd="131dp"
             android:background="#ffffff"
@@ -80,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="240dp"
             android:layout_marginEnd="133dp"
             android:background="#ffffff"
@@ -93,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="488dp"
             android:layout_marginEnd="133dp"
             android:background="#ffffff"
@@ -106,6 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="404dp"
             android:layout_marginEnd="129dp"
             android:background="#ffffff"
@@ -119,6 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="324dp"
             android:layout_marginEnd="132dp"
             android:background="#ffffff"
@@ -146,7 +153,7 @@
             android:layout_marginTop="204dp"
             android:layout_marginEnd="257dp"
             android:text="Apellido(s)"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
         <TextView
@@ -158,7 +165,7 @@
             android:layout_marginTop="284dp"
             android:layout_marginEnd="272dp"
             android:text="Telefono"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
         <TextView
@@ -170,7 +177,7 @@
             android:layout_marginTop="366dp"
             android:layout_marginEnd="302dp"
             android:text="Email"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
         <TextView
@@ -182,7 +189,7 @@
             android:layout_marginTop="450dp"
             android:layout_marginEnd="254dp"
             android:text="Contraseña"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
     </RelativeLayout>

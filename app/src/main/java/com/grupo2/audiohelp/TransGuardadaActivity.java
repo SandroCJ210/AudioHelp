@@ -12,11 +12,10 @@ public class TransGuardadaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transcripcion_guardada);
 
-        Button BtonAgregar = findViewById(R.id.btnNuevaTranscripcion);
+        Button BtonAgregar = findViewById(R.id.newTranscriptionButton);
         BtonAgregar.setOnClickListener(w -> {
             Intent intent = new Intent(TransGuardadaActivity.this,TranscriptionActivity.class);
             startActivity(intent);
         });
-
     }
 }

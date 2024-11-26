@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6B7683"
-    android:id="@+id/ajustes_main"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <!-- Menú de configuración (esquina superior izquierda) -->
@@ -14,14 +14,16 @@
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_margin="0dp"
+        android:background="?android:attr/selectableItemBackground"
         android:src="@drawable/ic_menu"
-        android:background="?android:attr/selectableItemBackground" />
+        android:tint="@color/primaryText" />
 
     <!-- Título de la aplicación -->
     <TextView
         style="@style/Titulo_Aplicacion"
         android:background="#00CDD7F9"
-        android:text="AUDIO-HELP" />
+        android:text="AUDIO-HELP"
+        android:textColor="@color/primaryText" />
 
     <!-- Indicador de página -->
     <LinearLayout
@@ -35,17 +37,22 @@
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
             android:background="@drawable/indicator_inactive"
-            android:layout_marginEnd="4dp" />
+            android:backgroundTint="@color/secondCard" />
+
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
             android:background="@drawable/indicator_active"
-            android:layout_marginEnd="4dp" />
+            android:backgroundTint="@color/secondaryText" />
+
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
-            android:background="@drawable/indicator_inactive" />
+            android:background="@drawable/indicator_inactive"
+            android:backgroundTint="@color/secondCard" />
     </LinearLayout>
 
     <!-- Texto "Transcripción" -->
@@ -55,7 +62,8 @@
         android:layout_marginTop="200dp"
         android:autoText="true"
         android:background="#0049454F"
-        android:text="Transcripción" />
+        android:text="Transcripción"
+        android:textColor="@color/primaryText" />
 
 
     <!-- Botón de transcripción (icono grande en el centro) -->
@@ -66,9 +74,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="265dp"
         android:background="@drawable/boton_circular"
-        android:src="@drawable/ic_transcription"
+        android:padding="50dp"
         android:scaleType="centerInside"
-        android:padding="50dp"/>
+        android:src="@drawable/ic_transcription"
+        android:tint="@color/primaryText" />
 
     <!-- Opciones inferiores: Llamada de emergencia y Transcripciones guardadas -->
     <LinearLayout
@@ -77,29 +86,31 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <!-- Llamada de emergencia -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginEnd="40dp"
             android:gravity="center"
-            android:layout_marginEnd="40dp">
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/emergency_call_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_emergency_call"
-                android:background="?android:attr/selectableItemBackground" />
+                android:tint="@color/primaryText" />
 
             <TextView
                 style="@style/Letra_Pequena"
+                android:gravity="center"
                 android:text="Llamada\nde Emergencia"
-                android:gravity="center" />
+                android:textColor="@color/secondaryText" />
         </LinearLayout>
 
         <!-- Transcripciones guardadas -->
@@ -113,14 +124,16 @@
                 android:id="@+id/saved_transcriptions_icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_saved_transcriptions"
-                android:background="?android:attr/selectableItemBackground" />
+                android:tint="@color/primaryText" />
 
             <TextView
                 style="@style/Letra_Pequena"
+                android:gravity="center"
                 android:text="Transcripciones\nGuardadas"
-                android:gravity="center" />
+                android:textColor="@color/secondaryText" />
         </LinearLayout>
     </LinearLayout>
 

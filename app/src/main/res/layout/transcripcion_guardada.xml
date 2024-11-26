@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_caja"
+    android:background="@color/background"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -22,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/fondo_boton"
+        android:background="@color/card"
         android:padding="12dp">
 
         <LinearLayout
@@ -35,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/fondo_caja"
+                android:background="@color/secondCard"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
@@ -43,11 +44,11 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:text="Transcripción 001: 10:32am 22/11/24"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:layout_gravity="center_vertical" />
+                    android:textColor="@color/primaryText"
+                    android:textSize="16sp" />
 
                 <!-- Botón de opciones -->
                 <ImageButton
@@ -55,10 +56,10 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="?attr/selectableItemBackground"
-                    android:src="@drawable/ic_more_option"
                     android:contentDescription="Opciones"
-                    android:tint="#000000"
-                    android:scaleType="centerInside" />
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_more_option"
+                    android:tint="@color/background" />
             </LinearLayout>
 
             <!-- Repetir este bloque para cada transcripción -->
@@ -66,16 +67,15 @@
     </ScrollView>
 
     <!-- Botón para agregar nueva transcripción -->
-    <Button
-        android:id="@+id/btnNuevaTranscripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#225C6E"
-        android:text="Nueva Transcripción"
-        android:textColor="#FCF5FD" />
 
     <!-- Pie de página -->
+    <Button
+        android:id="@+id/newTranscriptionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/card"
+        android:text="Nueva Transcripción" />
+
     <TextView
         android:id="@+id/version_text"
         android:layout_width="match_parent"
@@ -83,6 +83,6 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="AUDIO-HELP versión 1.0.1"
-        android:textColor="#49454F"
+        android:textColor="@color/secondaryText"
         android:textSize="12sp" />
 </LinearLayout>
