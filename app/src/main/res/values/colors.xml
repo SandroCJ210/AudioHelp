@@ -5,5 +5,10 @@
     <color name="blue">#2196F3</color>
     <color name="azul_claro">#00BCD4</color>
     <color name="fondo_caja">#37474F</color>
+    <color name="background">#18191A</color>
+    <color name="card">#242526</color>
+    <color name="primaryText">#E4E6EB</color>
+    <color name="secondaryText">#B0B3B8</color>
+    <color name="secondCard">#3A3B3C</color>
 
 </resources>
