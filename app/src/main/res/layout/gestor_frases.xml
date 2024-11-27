@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context=".MainActivity">
+    android:background="@color/background">
 
     <!-- Título -->
     <TextView
@@ -13,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="AUDIO-HELP"
+        android:text="@string/title_gestor_frases"
         android:textColor="@color/primaryText"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -40,7 +38,7 @@
             android:layout_height="match_parent"
             android:background="@color/card"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/item1"
@@ -82,52 +80,16 @@
         android:id="@+id/buttonAdd"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="150dp"
         android:background="@android:color/transparent"
         android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardView"
         app:tint="@android:color/white" />
 
-    <!-- Iconos en la parte inferior -->
-    <LinearLayout
-        android:id="@+id/footerIcons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/iconSave"
-            android:layout_width="40dp"
-            android:layout_height="36dp"
-            android:layout_margin="8dp"
-            android:src="@drawable/guardar"
-            app:tint="@color/primaryText" />
-
-        <ImageView
-            android:id="@+id/iconChat"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="8dp"
-            android:src="@drawable/chat"
-            app:tint="@color/primaryText" />
-
-        <ImageView
-            android:id="@+id/iconShare"
-            android:layout_width="35dp"
-            android:layout_height="36dp"
-            android:layout_margin="8dp"
-            android:src="@drawable/compartir"
-            app:tint="@color/primaryText" />
-    </LinearLayout>
 
     <!-- Botón de cerrar (X) -->
     <ImageButton
@@ -135,12 +97,12 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="16dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="16dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/salir_circular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/retroceder"
+        android:scaleType="fitCenter"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/primaryText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

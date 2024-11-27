@@ -10,6 +10,7 @@
     <string name="title_transcription">Transcripción</string>
     <string name="title_locucion">Locución</string>
     <string name="title_gestor_transcriptions">Historial de  Transcripciones</string>
+    <string name="title_gestor_frases">Frases de  Guardadas</string>
 
     <string name = "Phrases">Frases Destacadas</string>
     <string name = "Close">Cerrar</string>
