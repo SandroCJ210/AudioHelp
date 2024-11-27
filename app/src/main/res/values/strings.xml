@@ -8,7 +8,7 @@
     <string name="title_login">INICIAR SESION</string>
     <string name="title_newaccount">Crear Cuenta</string>
     <string name="title_transcription">Transcripción</string>
-    <string name="title_locucion">Locucion</string>
+    <string name="title_locucion">Locución</string>
     <string name="title_gestor_transcriptions">Historial de  Transcripciones</string>
 
     <string name = "Phrases">Frases Destacadas</string>
