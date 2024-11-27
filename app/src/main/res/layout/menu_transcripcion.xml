@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
@@ -16,7 +17,7 @@
         android:layout_margin="0dp"
         android:background="?android:attr/selectableItemBackground"
         android:src="@drawable/opciones"
-        android:tint="@color/primaryText" />
+        app:tint="@color/primaryText" />
 
     <!-- Título de la aplicación -->
     <TextView
@@ -77,7 +78,7 @@
         android:padding="50dp"
         android:scaleType="centerInside"
         android:src="@drawable/transcripcion_logo"
-        android:tint="@color/primaryText" />
+        app:tint="@color/primaryText" />
 
     <!-- Opciones inferiores: Llamada de emergencia y Transcripciones guardadas -->
     <LinearLayout
@@ -104,7 +105,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/llamar"
-                android:tint="@color/primaryText" />
+                app:tint="@color/primaryText" />
 
             <TextView
                 style="@style/Letra_Pequena"
@@ -127,7 +128,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/carpeta"
-                android:tint="@color/primaryText" />
+                app:tint="@color/primaryText" />
 
             <TextView
                 style="@style/Letra_Pequena"

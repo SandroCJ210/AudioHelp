@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
@@ -98,7 +99,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/guardar"
-                android:tint="@color/primaryText" />
+                app:tint="@color/primaryText" />
         </LinearLayout>
 
         <!-- frases guardadas -->
@@ -116,7 +117,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/chat"
-                android:tint="@color/primaryText" />
+                app:tint="@color/primaryText" />
         </LinearLayout>
 
         <!-- compartir transcripcion -->
@@ -133,7 +134,7 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/compartir"
-                android:tint="@color/primaryText" />
+                app:tint="@color/primaryText" />
         </LinearLayout>
     </LinearLayout>
 
@@ -146,6 +147,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="centerInside"
         android:src="@drawable/salir"
-        android:tint="@color/primaryText" />
+        app:tint="@color/primaryText" />
 
 </RelativeLayout>

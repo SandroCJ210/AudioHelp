@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Pequeño, Predeterminado"
+            android:text="@string/font_description"
             android:textColor="@color/secondaryText"
             android:textSize="14sp" />
     </LinearLayout>
@@ -58,7 +58,7 @@
             android:id="@+id/textTituloColorTema"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/color_theme"
+            android:text="@string/temas"
             android:textColor="@color/primaryText"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -68,7 +68,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Material Theme: Claro/Oscuro"
+            android:text="@string/temas_descripcion"
+            android:textColor="@color/secondaryText"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Botón para cambiar el color y tema -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/card"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textTituloVoiceChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/voice_change"
+            android:textColor="@color/primaryText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textDescripcionVoiceChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/voices_description"
             android:textColor="@color/secondaryText"
             android:textSize="14sp" />
     </LinearLayout>
@@ -122,8 +150,6 @@
             android:textColor="#FCF5FD" />
     </LinearLayout>
 
-    <!-- Botón para guardar la configuración -->
-
     <!-- Pie de página -->
 
     <Button
@@ -137,7 +163,7 @@
         android:id="@+id/version_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="180dp"
         android:gravity="center"
         android:text="@string/version_text"
         android:textColor="#49454F"

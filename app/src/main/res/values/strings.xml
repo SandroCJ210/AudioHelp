@@ -1,24 +1,32 @@
 <resources>
+    <!-- aplicacion -->
     <string name="app_name">AUDIO-HELP</string>
+    <string name="version_text">versión 0.4</string>
+    <!-- titulos layouts -->
+    <string name="title_config">Configuración</string>
+    <string name="title_newaccount">Crear Cuenta</string>
 
     <string name = "Phrases">Frases Destacadas</string>
     <string name = "Close">Cerrar</string>
     <string name = "Play">Reproducir</string>
+    <string name = "Nombres">Nombres</string>
+    <string name = "Apellidos">Apellido</string>
+    <string name = "Telefono">telefono</string>
+    <string name = "Email">email</string>
+    <string name = "Contraseña">contraseña</string>
 
-    <string name="title_config">Configuración</string>
-    <string name="brightness">Brillo</string>
+    <!-- titulos botones -->
     <string name="font">Fuente</string>
-    <string name="font_description">Pequeño, Predeterminado</string>
-    <string name="voices_description">Hombre</string>
-    <string name="correct_description">Habilitado</string>
-    <string name="screen_scale">Escala de la Pantalla</string>
-    <string name="screen_scale_standard">Estándar</string>
-    <string name="color_theme">Color y Tema</string>
-    <string name="material_theme">Material Theme</string>
+    <string name="voice_change">Cambiar voz</string>
+    <string name="temas">Color y Tema</string>
     <string name="background_mode">Segundo Plano</string>
     <string name="autocorrect">Autocorrección</string>
-    <string name="voice_sound">Sonido de Voz</string>
     <string name="save_button">Guardar configuración</string>
-    <string name="version_text">AUDIO-HELP versión 0.1.2</string>
+    <!-- Descripciones -->
+    <string name="font_description">Pequeño, Predeterminado</string>
+    <string name="voices_description">Hombre/Mujer/Otro</string>
+    <string name="correct_description">Habilitado</string>
+    <string name="disable">Deshabilitado</string>
+    <string name="temas_descripcion">Claro/Oscuro</string>
 
 </resources>

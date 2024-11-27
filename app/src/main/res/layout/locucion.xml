@@ -89,8 +89,8 @@
         android:layout_marginBottom="35dp"
         android:background="#00FFFFFF"
         android:contentDescription="@string/Close"
-        android:tint="@color/primaryText"
-        app:srcCompat="@drawable/salir_circular" />
+        app:srcCompat="@drawable/salir_circular"
+        app:tint="@color/primaryText" />
 
     <LinearLayout
         android:id="@+id/locutionLayout"
@@ -109,8 +109,8 @@
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/Play"
-            android:tint="@color/primaryText"
-            app:srcCompat="@drawable/play" />
+            app:srcCompat="@drawable/play"
+            app:tint="@color/primaryText" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -119,8 +119,8 @@
             android:layout_weight="1"
             android:background="#00FFFFFF"
             android:contentDescription="@string/Phrases"
-            android:tint="@color/primaryText"
-            app:srcCompat="@drawable/chat" />
+            app:srcCompat="@drawable/chat"
+            app:tint="@color/primaryText" />
 
     </LinearLayout>
 

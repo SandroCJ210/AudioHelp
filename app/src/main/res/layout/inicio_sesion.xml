@@ -112,8 +112,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="68dp"
             android:layout_marginEnd="141dp"
-            android:tint="@color/primaryText"
-            app:srcCompat="@drawable/usuario" />
+            app:srcCompat="@drawable/usuario"
+            app:tint="@color/primaryText" />
 
         <EditText
             android:id="@+id/editTextContraseña"

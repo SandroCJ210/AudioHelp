@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -59,7 +59,7 @@
                     android:contentDescription="Opciones"
                     android:scaleType="centerInside"
                     android:src="@drawable/cambiar_vista"
-                    android:tint="@color/background" />
+                    app:tint="@color/background" />
             </LinearLayout>
 
             <!-- Repetir este bloque para cada transcripción -->

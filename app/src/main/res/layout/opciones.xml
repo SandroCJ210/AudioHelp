@@ -47,7 +47,7 @@
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/usuario"
-            android:tint="@color/primaryText" />
+            app:tint="@color/primaryText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/engranaje"
-            android:tint="@color/primaryText" />
+            app:tint="@color/primaryText" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
             android:layout_height="38dp"
             android:layout_marginEnd="20dp"
             android:src="@drawable/libro"
-            android:tint="@color/primaryText" />
+            app:tint="@color/primaryText" />
 
         <TextView
             android:layout_width="wrap_content"
