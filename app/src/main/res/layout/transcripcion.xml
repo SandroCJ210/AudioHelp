@@ -40,18 +40,18 @@
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/indicator_inactive" />
+            android:background="@drawable/boton_inactivo" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/indicator_active" />
+            android:background="@drawable/boton_activo" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
-            android:background="@drawable/indicator_inactive" />
+            android:background="@drawable/boton_inactivo" />
     </LinearLayout>
 
 
@@ -97,7 +97,7 @@
                 android:layout_height="60dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_guardados"
+                android:src="@drawable/guardar"
                 android:tint="@color/primaryText" />
         </LinearLayout>
 
@@ -115,7 +115,7 @@
                 android:layout_height="60dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_frases_guardadas"
+                android:src="@drawable/chat"
                 android:tint="@color/primaryText" />
         </LinearLayout>
 
@@ -132,7 +132,7 @@
                 android:layout_height="60dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_compartir"
+                android:src="@drawable/compartir"
                 android:tint="@color/primaryText" />
         </LinearLayout>
     </LinearLayout>
@@ -145,7 +145,7 @@
         android:layout_marginTop="650dp"
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_cerrar"
+        android:src="@drawable/salir"
         android:tint="@color/primaryText" />
 
 </RelativeLayout>

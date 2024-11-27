@@ -10,7 +10,7 @@ public class TransGuardadaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.transcripcion_guardada);
+        setContentView(R.layout.gestor_transcripciones);
 
         Button BtonAgregar = findViewById(R.id.newTranscriptionButton);
         BtonAgregar.setOnClickListener(w -> {

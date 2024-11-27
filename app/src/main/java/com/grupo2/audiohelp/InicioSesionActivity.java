@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +11,7 @@ public class InicioSesionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.iniciosesion_main);
+        setContentView(R.layout.inicio_sesion);
 
         Button BtonLocucion = findViewById(R.id.buttonRegistrarse);
         BtonLocucion.setOnClickListener(w -> {

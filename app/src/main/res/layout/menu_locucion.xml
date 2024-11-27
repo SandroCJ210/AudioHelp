@@ -15,7 +15,7 @@
         android:layout_alignParentStart="true"
         android:layout_margin="0dp"
         android:background="?android:attr/selectableItemBackground"
-        android:src="@drawable/ic_menu" />
+        android:src="@drawable/opciones" />
 
     <!-- Título de la aplicación -->
     <TextView
@@ -38,20 +38,20 @@
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/indicator_inactive"
+            android:background="@drawable/boton_inactivo"
             android:backgroundTint="@color/secondCard" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/indicator_inactive"
+            android:background="@drawable/boton_inactivo"
             android:backgroundTint="@color/secondCard" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
-            android:background="@drawable/indicator_active"
+            android:background="@drawable/boton_activo"
             android:backgroundTint="@color/secondaryText" />
     </LinearLayout>
 
@@ -73,10 +73,10 @@
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="265dp"
-        android:background="@drawable/boton_circular"
+        android:background="@drawable/circulo"
         android:padding="0dp"
         android:scaleType="centerInside"
-        android:src="@drawable/transcribir_audio_texto"
+        android:src="@drawable/locucion_logo"
         android:tint="@color/primaryText" />
 
     <!-- Opciones inferiores: Llamada de emergencia y Transcripciones guardadas -->
@@ -103,7 +103,7 @@
                 android:layout_height="40dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_emergency_call"
+                android:src="@drawable/emergency_call"
                 android:tint="@color/primaryText" />
 
             <TextView
@@ -126,7 +126,7 @@
                 android:layout_height="40dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_saved_transcriptions"
+                android:src="@drawable/carpeta"
                 android:tint="@color/primaryText" />
 
             <TextView

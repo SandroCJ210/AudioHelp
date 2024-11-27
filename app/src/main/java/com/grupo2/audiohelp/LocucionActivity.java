@@ -10,7 +10,7 @@ public class LocucionActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.locution_main);
+        setContentView(R.layout.menu_locucion);
         //btnTranscription1
 
         ImageButton btnLoc = findViewById(R.id.locution_button);

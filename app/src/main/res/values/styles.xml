@@ -9,11 +9,11 @@
     </style>
     <!-- Tema oscuro -->
     <style name="Theme_App_Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-            <item name="colorPrimary">@color/black</item>
-            <item name="colorPrimaryVariant">@color/white</item>
-            <item name="colorOnPrimary">@android:color/black</item>
-            <item name="colorSecondary">@color/blue</item>
-            <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorOnSecondary">@android:color/white</item>
     </style>
 
 </resources>

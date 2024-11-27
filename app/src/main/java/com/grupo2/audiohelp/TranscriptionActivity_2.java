@@ -10,7 +10,7 @@ public class TranscriptionActivity_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.transcription_main_2);
+        setContentView(R.layout.transcripcion);
 
         ImageButton btnLoc = findViewById(R.id.frases_guardadas);
         btnLoc.setOnClickListener(v -> {

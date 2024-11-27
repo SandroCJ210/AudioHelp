@@ -62,20 +62,20 @@
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/indicator_inactive"
+            android:background="@drawable/boton_inactivo"
             android:backgroundTint="#1F364B" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
-            android:background="@drawable/indicator_active"
+            android:background="@drawable/boton_activo"
             android:backgroundTint="#FFFFFF" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="match_parent"
-            android:background="@drawable/indicator_inactive"
+            android:background="@drawable/boton_inactivo"
             android:backgroundTint="#1F364B" />
     </LinearLayout>
 
@@ -90,7 +90,7 @@
         android:background="#00FFFFFF"
         android:contentDescription="@string/Close"
         android:tint="@color/primaryText"
-        app:srcCompat="@drawable/ic_close" />
+        app:srcCompat="@drawable/salir_circular" />
 
     <LinearLayout
         android:id="@+id/locutionLayout"
@@ -120,7 +120,7 @@
             android:background="#00FFFFFF"
             android:contentDescription="@string/Phrases"
             android:tint="@color/primaryText"
-            app:srcCompat="@drawable/ic_chat_bubble" />
+            app:srcCompat="@drawable/chat" />
 
     </LinearLayout>
 

@@ -10,7 +10,7 @@ public class RegistrarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.crearcuenta_main);
+        setContentView(R.layout.crear_cuenta);
 
         ImageButton btnRetroceder = findViewById(R.id.imageButton);
         btnRetroceder.setOnClickListener(v -> {

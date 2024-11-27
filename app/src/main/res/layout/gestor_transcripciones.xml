@@ -58,7 +58,7 @@
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Opciones"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_more_option"
+                    android:src="@drawable/cambiar_vista"
                     android:tint="@color/background" />
             </LinearLayout>
 

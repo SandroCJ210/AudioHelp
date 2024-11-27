@@ -10,7 +10,7 @@ public class FrasesGuardadasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.frases_guardadas);
+        setContentView(R.layout.gestor_frases);
 
         ImageButton btnCerrar = findViewById(R.id.buttonClose);
         btnCerrar.setOnClickListener(v -> {
