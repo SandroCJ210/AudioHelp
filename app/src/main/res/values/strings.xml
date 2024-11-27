@@ -22,7 +22,7 @@
     <string name = "Contraseña">Contraseña</string>
 
     <!-- suntitulos layouts -->
-    <string name = "iniciar_sesion">Iniciar sesión</string>
+    <string name = "iniciar_sesion">Cuenta</string>
     <string name = "configuracion">Configuración</string>
     <string name = "tutorial">Tutorial</string>
     <string name = "transcripcion">Transcripción</string>
@@ -46,6 +46,7 @@
     <string name="temas_descripcion">Claro/Oscuro</string>
     <string name="call">Llamada\nde Emergencia</string>
     <string name="historial">Transcripciones\nGuardadas</string>
+    <string name="no_registrado">Sin usuario</string>
     <string name="transcripcionguardada1">Transcripcion 1</string>
     <string name="transcripcionguardada2">Transcripcion 2</string>
 

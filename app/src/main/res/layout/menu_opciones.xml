@@ -43,7 +43,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="350dp"
         android:text="@string/title_options"
         android:textColor="@color/primaryText"
         android:textSize="60sp"
@@ -76,7 +76,7 @@
             android:textSize="30sp" />
     </LinearLayout>
 
-    <!-- Botón: Configuración -->
+    <!-- Botón: Tutorial-->
     <LinearLayout
         android:id="@+id/btn_configuracion"
         android:layout_width="match_parent"
@@ -92,32 +92,6 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/engranaje"
-            app:tint="@color/primaryText" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/configuracion"
-            android:textColor="@color/primaryText"
-            android:textSize="30sp" />
-    </LinearLayout>
-
-    <!-- Botón: Tutorial -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_configuracion"
-        android:layout_marginBottom="16dp"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="8dp">
-
-        <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_marginEnd="20dp"
             android:src="@drawable/libro"
             app:tint="@color/primaryText" />
 
@@ -129,7 +103,36 @@
             android:textSize="30sp" />
     </LinearLayout>
 
+    <!-- Botón: Configuración -->
+
     <!-- Versión -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="5dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/engranaje"
+            app:tint="@color/primaryText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/configuracion"
+            android:textColor="@color/primaryText"
+            android:textSize="30sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/BtnTranscription3"
@@ -143,19 +146,30 @@
         android:textColor="@android:color/transparent"
         android:visibility="visible" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="100dp"
+        app:srcCompat="@drawable/avatar" />
+
     <TextView
-        android:id="@+id/version"
-        android:layout_width="88dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/version_text"
-        android:textColor="@color/secondaryText"
-        android:textSize="14sp" />
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/no_registrado"
+        android:textAlignment="center"
+        android:textColor="@color/primaryText"
+        android:textSize="30sp" />
 
 </RelativeLayout>
