@@ -6,7 +6,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LocucionActivity extends AppCompatActivity{
+public class Menu_Locuciones_activity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,23 +15,19 @@ public class LocucionActivity extends AppCompatActivity{
 
         ImageButton btnLoc = findViewById(R.id.locution_button);
         btnLoc.setOnClickListener(v -> {
-            Intent intent = new Intent(LocucionActivity.this,LocucionActivity_2.class);
+            Intent intent = new Intent(Menu_Locuciones_activity.this, Locucion_activity.class);
             startActivity(intent);
         });
 
         Button btnTrans = findViewById(R.id.btnTranscription1);
         btnTrans.setOnClickListener(v -> {
-            Intent intent = new Intent(LocucionActivity.this,TranscriptionActivity.class);
+            Intent intent = new Intent(Menu_Locuciones_activity.this, Menu_Transcripciones_activity.class);
             startActivity(intent);
-        });
-        ImageButton btnMenu = findViewById(R.id.menu_icon);
-        btnMenu.setOnClickListener(w -> {
-            Intent intent = new Intent(LocucionActivity.this,OpcionesActivity.class);
-            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         });
         ImageButton btnHistorial = findViewById(R.id.saved_frases_icon);
         btnHistorial.setOnClickListener(w -> {
-            Intent intent = new Intent(LocucionActivity.this,FrasesGuardadasActivity.class);
+            Intent intent = new Intent(Menu_Locuciones_activity.this, Gestor_frases_activity.class);
             startActivity(intent);
         });
 

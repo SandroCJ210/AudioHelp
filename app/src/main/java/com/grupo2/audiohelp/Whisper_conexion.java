@@ -2,7 +2,7 @@ package com.grupo2.audiohelp;
 import okhttp3.*;
 import java.io.File;
 import java.io.IOException;
-public class WhisperTranscription {
+public class Whisper_conexion {
     private static final String API_KEY = "sk-svcacct-ROoTzJZk7m2Bi03P3R_T2vRHacmtOXvYfZ80odzX9pehqzHFe8FK9ml6nh4o44m7T3BlbkFJjtjOyUb4QNq4cYH1FRASERPRPXeZLh4K4TF7xrP_zzLOYi4nc-704cIrk9XIm5MA";
     private static final String BASE_URL = "https://api.openai.com/v1/audio/transcriptions";
 
@@ -34,7 +34,7 @@ public class WhisperTranscription {
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     String responseData = response.body().string();
-                    System.out.println("Transcripción: " + responseData);
+                    System.out.println(responseData);
                 } else {
                     System.out.println("Error : " + response.message());
                 }

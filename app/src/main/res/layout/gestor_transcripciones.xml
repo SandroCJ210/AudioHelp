@@ -5,26 +5,30 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    >
 
     <!-- Título -->
+
+    <!-- Lista de transcripciones -->
+
     <TextView
         android:id="@+id/textViewTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Transcripciones Guardadas"
+        android:layout_marginBottom="20dp"
+        android:text="@string/title_gestor_transcriptions"
         android:textColor="#FCF5FD"
         android:textSize="24sp"
+
         android:textStyle="bold" />
 
-    <!-- Lista de transcripciones -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/card"
-        android:padding="12dp">
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,25 +45,56 @@
                 android:padding="8dp">
 
                 <!-- Título de la transcripción -->
+
+                <!-- Botón de opciones -->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:text="Transcripción 001: 10:32am 22/11/24"
+                    android:text="@string/transcripcionguardada1"
                     android:textColor="@color/primaryText"
                     android:textSize="16sp" />
 
-                <!-- Botón de opciones -->
                 <ImageButton
                     android:id="@+id/btnOpcionesTranscripcion1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:background="?attr/selectableItemBackground"
                     android:contentDescription="Opciones"
                     android:scaleType="centerInside"
                     android:src="@drawable/cambiar_vista"
-                    app:tint="@color/background" />
+                    app:tint="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@color/secondCard"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Título de la transcripción -->
+
+                <!-- Botón de opciones -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/transcripcionguardada2"
+                    android:textColor="@color/primaryText"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/btnOpcionesTranscripcion2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Opciones"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/cambiar_vista"
+                    app:tint="@color/white" />
             </LinearLayout>
 
             <!-- Repetir este bloque para cada transcripción -->
@@ -69,12 +104,13 @@
     <!-- Botón para agregar nueva transcripción -->
 
     <!-- Pie de página -->
+
     <Button
         android:id="@+id/newTranscriptionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/card"
-        android:text="Nueva Transcripción" />
+        android:text="@string/new_transcription" />
 
     <TextView
         android:id="@+id/version_text"
@@ -82,7 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="AUDIO-HELP versión 1.0.1"
+        android:text="@string/version_text"
         android:textColor="@color/secondaryText"
         android:textSize="12sp" />
 </LinearLayout>

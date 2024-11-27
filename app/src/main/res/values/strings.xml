@@ -3,18 +3,29 @@
     <string name="app_name">AUDIO-HELP</string>
     <string name="version_text">versión 0.4</string>
     <!-- titulos layouts -->
-    <string name="title_config">Configuración</string>
+    <string name="title_config">CONFIGURACIÓN</string>
+    <string name="title_options">OPCIONES</string>
+    <string name="title_login">INICIAR SESION</string>
     <string name="title_newaccount">Crear Cuenta</string>
+    <string name="title_transcription">Transcripción</string>
+    <string name="title_locucion">Locucion</string>
+    <string name="title_gestor_transcriptions">Historial de  Transcripciones</string>
 
     <string name = "Phrases">Frases Destacadas</string>
     <string name = "Close">Cerrar</string>
     <string name = "Play">Reproducir</string>
     <string name = "Nombres">Nombres</string>
     <string name = "Apellidos">Apellido</string>
-    <string name = "Telefono">telefono</string>
-    <string name = "Email">email</string>
-    <string name = "Contraseña">contraseña</string>
+    <string name = "Telefono">Telefono</string>
+    <string name = "e_user">E-mail o Usuario</string>
+    <string name = "Email">E-mail</string>
+    <string name = "Contraseña">Contraseña</string>
 
+    <!-- suntitulos layouts -->
+    <string name = "iniciar_sesion">Iniciar sesión</string>
+    <string name = "configuracion">Configuración</string>
+    <string name = "tutorial">Tutorial</string>
+    <string name = "transcripcion">Transcripción</string>
     <!-- titulos botones -->
     <string name="font">Fuente</string>
     <string name="voice_change">Cambiar voz</string>
@@ -22,11 +33,30 @@
     <string name="background_mode">Segundo Plano</string>
     <string name="autocorrect">Autocorrección</string>
     <string name="save_button">Guardar configuración</string>
+    <string name="new_transcription">Nueva Transcripción</string>
+    <string name="button_ingresar">Ingresar</string>
+    <string name="button_registrar">Registrarse</string>
+
+
     <!-- Descripciones -->
     <string name="font_description">Pequeño, Predeterminado</string>
     <string name="voices_description">Hombre/Mujer/Otro</string>
     <string name="correct_description">Habilitado</string>
     <string name="disable">Deshabilitado</string>
     <string name="temas_descripcion">Claro/Oscuro</string>
+    <string name="call">Llamada\nde Emergencia</string>
+    <string name="historial">Transcripciones\nGuardadas</string>
+    <string name="transcripcionguardada1">Transcripcion 1</string>
+    <string name="transcripcionguardada2">Transcripcion 2</string>
+
+    <!-- hints -->
+    <string name="hint1">Aquí aparecerá la transcripción...</string>
+    <string name="hint2">Nombre(s)</string>
+    <string name="hint3">Apellido(s)</string>
+    <string name="hint4">Ingresa tu email</string>
+    <string name="hint5">Ingresa tu contraseña</string>
+    <string name="hint6">Ingresa tu teléfono</string>
+    <string name="hint7">¿Olvidaste tu contraseña?</string>
+
 
 </resources>

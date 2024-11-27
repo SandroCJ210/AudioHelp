@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="700dp"
+            android:layout_marginTop="850dp"
             android:text="@string/version_text"
             android:textColor="#49454F"
             android:textSize="12sp" />
@@ -72,7 +72,7 @@
             android:layout_marginEnd="131dp"
             android:background="#ffffff"
             android:ems="10"
-            android:hint="Nombre(s)"
+            android:hint="@string/hint2"
             android:inputType="text" />
 
         <EditText
@@ -86,7 +86,7 @@
             android:layout_marginEnd="133dp"
             android:background="#ffffff"
             android:ems="10"
-            android:hint="Apellido(s)"
+            android:hint="@string/hint3"
             android:inputType="text" />
 
         <EditText
@@ -100,7 +100,7 @@
             android:layout_marginEnd="133dp"
             android:background="#ffffff"
             android:ems="10"
-            android:hint="Ingresa tu contraseña"
+            android:hint="@string/hint5"
             android:inputType="textPassword" />
 
         <EditText
@@ -114,7 +114,7 @@
             android:layout_marginEnd="129dp"
             android:background="#ffffff"
             android:ems="10"
-            android:hint="Ingresa tu email"
+            android:hint="@string/hint4"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -128,6 +128,7 @@
             android:layout_marginEnd="132dp"
             android:background="#ffffff"
             android:ems="10"
+            android:hint="@string/hint6"
             android:inputType="phone" />
 
         <TextView
@@ -142,6 +143,7 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
+
         <TextView
             android:id="@+id/textViewApellidos"
             android:layout_width="wrap_content"
@@ -149,8 +151,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="204dp"
-            android:layout_marginEnd="257dp"
-            android:text="Apellido(s)"
+            android:layout_marginEnd="280dp"
+            android:text="@string/Apellidos"
             android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
@@ -161,8 +163,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="284dp"
-            android:layout_marginEnd="272dp"
-            android:text="Telefono"
+            android:layout_marginEnd="275dp"
+            android:text="@string/Telefono"
             android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
@@ -173,8 +175,8 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="366dp"
-            android:layout_marginEnd="302dp"
-            android:text="Email"
+            android:layout_marginEnd="295dp"
+            android:text="@string/Email"
             android:textColor="@color/primaryText"
             android:textSize="18sp" />
 
@@ -186,7 +188,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="450dp"
             android:layout_marginEnd="254dp"
-            android:text="Contraseña"
+            android:text="@string/Contraseña"
             android:textColor="@color/primaryText"
             android:textSize="18sp" />
 

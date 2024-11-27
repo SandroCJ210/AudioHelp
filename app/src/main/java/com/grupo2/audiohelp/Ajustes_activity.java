@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AjustesMain extends AppCompatActivity {
+public class Ajustes_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,7 @@ public class AjustesMain extends AppCompatActivity {
 
         Button BtonGuardar = findViewById(R.id.saveConfigButton);
         BtonGuardar.setOnClickListener(w -> {
-            Intent intent = new Intent(AjustesMain.this,OpcionesActivity.class);
+            Intent intent = new Intent(Ajustes_activity.this, Menu_Opciones_activity.class);
             startActivity(intent);
         });
     }

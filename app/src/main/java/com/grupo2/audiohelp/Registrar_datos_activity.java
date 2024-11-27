@@ -6,16 +6,18 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FrasesGuardadasActivity extends AppCompatActivity {
+public class Registrar_datos_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gestor_frases);
+        setContentView(R.layout.crear_cuenta);
 
-        ImageButton btnCerrar = findViewById(R.id.buttonClose);
-        btnCerrar.setOnClickListener(v -> {
-            Intent intent = new Intent(FrasesGuardadasActivity.this, LocucionActivity.class);
+        ImageButton btnRetroceder = findViewById(R.id.imageButton);
+        btnRetroceder.setOnClickListener(v -> {
+            Intent intent = new Intent(Registrar_datos_activity.this, Iniciar_Sesion_activity.class);
             startActivity(intent);
         });
+
     }
+
 }

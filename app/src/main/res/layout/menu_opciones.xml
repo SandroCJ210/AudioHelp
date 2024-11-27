@@ -1,32 +1,50 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Título -->
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="70dp"
-        android:layout_height="72dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="150dp"
-        android:background="#004A5768"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+    <!-- Indicador de página -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
 
+        <!-- Puntos de paginación -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/boton_activo"
+            android:backgroundTint="@color/secondaryText" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/boton_activo"
+            android:backgroundTint="@color/secondCard" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/boton_inactivo"
+            android:backgroundTint="@color/secondCard" />
+    </LinearLayout>
+
+    <!-- Título -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="OPCIONES"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/title_options"
         android:textColor="@color/primaryText"
         android:textSize="60sp"
         android:textStyle="bold" />
@@ -36,6 +54,7 @@
         android:id="@+id/btn_iniciar_sesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/title"
         android:layout_marginBottom="16dp"
         android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
@@ -52,7 +71,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Iniciar sesión"
+            android:text="@string/iniciar_sesion"
             android:textColor="@color/primaryText"
             android:textSize="30sp" />
     </LinearLayout>
@@ -62,6 +81,7 @@
         android:id="@+id/btn_configuracion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btn_iniciar_sesion"
         android:layout_marginBottom="16dp"
         android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
@@ -78,7 +98,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Configuración"
+            android:text="@string/configuracion"
             android:textColor="@color/primaryText"
             android:textSize="30sp" />
     </LinearLayout>
@@ -87,6 +107,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/btn_configuracion"
         android:layout_marginBottom="16dp"
         android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
@@ -103,19 +124,38 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tutorial"
+            android:text="@string/tutorial"
             android:textColor="@color/primaryText"
             android:textSize="30sp" />
     </LinearLayout>
 
     <!-- Versión -->
+
+    <Button
+        android:id="@+id/BtnTranscription3"
+        android:layout_width="60dp"
+        android:layout_height="738dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="-20dp"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/transparent"
+        android:visibility="visible" />
+
     <TextView
         android:id="@+id/version"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
-        android:text="versión 1.0.1"
+        android:layout_marginStart="150dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/version_text"
         android:textColor="@color/secondaryText"
         android:textSize="14sp" />
 
-</LinearLayout>
+</RelativeLayout>

@@ -13,14 +13,13 @@
 
     <EditText
         android:id="@+id/locutionBox"
-        android:layout_width="360dp"
-        android:layout_height="380dp"
+        android:layout_width="380dp"
+        android:layout_height="540dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="140dp"
         android:background="#334455"
         android:backgroundTint="@color/card"
         android:gravity="top"
-        android:hint="Escribir..."
         android:imeOptions="actionDone"
         android:inputType="textMultiLine|textNoSuggestions"
         android:overScrollMode="always"
@@ -31,21 +30,14 @@
         android:textSize="20sp" />
 
     <TextView
-        style="@style/Titulo_Aplicacion"
-        android:background="#00CDD7F9"
-        android:backgroundTint="#FCF5FD"
-        android:text="@string/app_name"
-        android:textColor="@color/primaryText"
-        android:textSize="30sp" />
-
-    <TextView
         style="@style/Letra_Normal"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="65dp"
         android:background="#00CDD7F9"
-        android:text="Locución"
+        android:text="@string/title_locucion"
         android:textColor="@color/primaryText"
-        android:textSize="40sp" />
+        android:textSize="35sp" />
 
 
     <!-- Indicador de página -->
@@ -81,47 +73,60 @@
 
 
     <ImageButton
-        android:id="@+id/closeLocution"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/Close"
-        app:srcCompat="@drawable/salir_circular"
+        android:id="@+id/cerrar_transcripcion"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/retroceder"
         app:tint="@color/primaryText" />
 
-    <LinearLayout
-        android:id="@+id/locutionLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="110dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="115dp"
+        android:layout_weight="1"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/Play"
+        app:srcCompat="@drawable/play"
+        app:tint="@color/primaryText" />
 
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="40dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/Play"
-            app:srcCompat="@drawable/play"
-            app:tint="@color/primaryText" />
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/eliminar"
+        app:tint="@color/primaryText" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/Phrases"
-            app:srcCompat="@drawable/chat"
-            app:tint="@color/primaryText" />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/Phrases"
+        app:srcCompat="@drawable/chat"
+        app:tint="@color/primaryText" />
 
-    </LinearLayout>
 
 </RelativeLayout>
