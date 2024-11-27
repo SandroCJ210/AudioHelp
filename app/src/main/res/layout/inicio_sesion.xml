@@ -113,7 +113,7 @@
             android:layout_marginTop="68dp"
             android:layout_marginEnd="141dp"
             android:tint="@color/primaryText"
-            app:srcCompat="@drawable/acceso" />
+            app:srcCompat="@drawable/usuario" />
 
         <EditText
             android:id="@+id/editTextContraseña"

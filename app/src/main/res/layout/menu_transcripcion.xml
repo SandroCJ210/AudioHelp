@@ -103,7 +103,7 @@
                 android:layout_height="40dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
-                android:src="@drawable/emergency_call"
+                android:src="@drawable/llamar"
                 android:tint="@color/primaryText" />
 
             <TextView
