@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ajustes_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <EditText
+        android:id="@+id/transcriptionBox"
+        android:layout_width="800dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/card"
+        android:gravity="top"
+        android:hint="@string/hint1"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:overScrollMode="always"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/primaryText"
+        android:textColorHint="@color/secondaryText"
+        android:textCursorDrawable="@null"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/cerrar_transcripcion"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/retroceder"
+        app:tint="@color/primaryText" />
+
+    <ImageButton
+        android:id="@+id/transcripciones_guardadas"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/guardar"
+        app:tint="@color/primaryText" />
+
+    <ImageButton
+        android:id="@+id/borrar_transcripcion"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="1dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:scaleType="fitCenter"
+        android:src="@drawable/eliminar"
+        app:tint="@color/primaryText" />
+
+</RelativeLayout>
