@@ -1,6 +1,6 @@
 <resources>
     <!-- aplicacion -->
-    <string name="app_name">AUDIO-HELP</string>
+    <string name="app_name">AUDIOHELP</string>
     <string name="version_text">versión 0.4</string>
     <!-- titulos layouts -->
     <string name="title_config">CONFIGURACIÓN</string>
