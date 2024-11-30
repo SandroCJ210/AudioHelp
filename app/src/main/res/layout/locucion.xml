@@ -43,35 +43,6 @@
 
 
     <!-- Indicador de página -->
-    <LinearLayout
-        android:id="@+id/indicador_indice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
-
-        <!-- Puntos de paginación -->
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/boton_inactivo"
-            android:backgroundTint="#1F364B" />
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/boton_activo"
-            android:backgroundTint="#FFFFFF" />
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/boton_inactivo"
-            android:backgroundTint="#1F364B" />
-    </LinearLayout>
 
 
     <ImageButton
@@ -89,11 +60,11 @@
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:gravity="center"
         android:paddingBottom="50dp">
 
         <ImageButton
