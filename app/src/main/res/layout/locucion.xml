@@ -14,7 +14,7 @@
     <EditText
         android:id="@+id/locutionBox"
         android:layout_width="380dp"
-        android:layout_height="match_parent"
+        android:layout_height="450dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
         android:layout_marginBottom="64dp"
@@ -32,6 +32,7 @@
 
     <TextView
         style="@style/Letra_Normal"
+        android:id="@+id/titleLocution"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
@@ -88,19 +89,28 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:gravity="center"
+        android:paddingBottom="50dp">
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:id="@+id/imageButton2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Phrases"
+            app:srcCompat="@drawable/chat"
+            app:tint="@color/primaryText" />
+
+        <ImageButton
+            android:id="@+id/playLocution"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="50dp"
             android:background="#00FFFFFF"
             android:contentDescription="@string/Play"
             app:srcCompat="@drawable/play"
@@ -110,21 +120,12 @@
             android:id="@+id/imageButton5"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="32dp"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/eliminar"
             app:tint="@color/primaryText" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/Phrases"
-            app:srcCompat="@drawable/chat"
-            app:tint="@color/primaryText" />
     </LinearLayout>
+
 
 
 </RelativeLayout>
