@@ -14,9 +14,10 @@
     <EditText
         android:id="@+id/locutionBox"
         android:layout_width="380dp"
-        android:layout_height="540dp"
+        android:layout_height="450dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
+        android:layout_marginBottom="64dp"
         android:background="#334455"
         android:backgroundTint="@color/card"
         android:gravity="top"
@@ -31,45 +32,17 @@
 
     <TextView
         style="@style/Letra_Normal"
+        android:id="@+id/titleLocution"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:background="#00CDD7F9"
         android:text="@string/title_locucion"
-        android:textColor="@color/primaryText"
-        android:textSize="35sp" />
+        android:textColor="@color/title"
+        android:textSize="45sp" />
 
 
     <!-- Indicador de página -->
-    <LinearLayout
-        android:id="@+id/indicador_indice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
-
-        <!-- Puntos de paginación -->
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/boton_inactivo"
-            android:backgroundTint="#1F364B" />
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/boton_activo"
-            android:backgroundTint="#FFFFFF" />
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/boton_inactivo"
-            android:backgroundTint="#1F364B" />
-    </LinearLayout>
 
 
     <ImageButton
@@ -86,47 +59,44 @@
         app:tint="@color/primaryText" />
 
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="175dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="115dp"
-        android:layout_weight="1"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/Play"
-        app:srcCompat="@drawable/play"
-        app:tint="@color/primaryText" />
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="50dp">
 
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/eliminar"
-        app:tint="@color/primaryText" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Phrases"
+            app:srcCompat="@drawable/chat"
+            app:tint="@color/primaryText" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/Phrases"
-        app:srcCompat="@drawable/chat"
-        app:tint="@color/primaryText" />
+        <ImageButton
+            android:id="@+id/playLocution"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Play"
+            app:srcCompat="@drawable/play"
+            app:tint="@color/primaryText" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/eliminar"
+            app:tint="@color/primaryText" />
+    </LinearLayout>
+
 
 
 </RelativeLayout>

@@ -50,7 +50,7 @@
             android:layout_marginTop="228dp"
             android:layout_marginEnd="116dp"
             android:text="@string/title_login"
-            android:textColor="@color/primaryText"
+            android:textColor="@color/title"
             android:textSize="24sp"
             tools:layout_centerHorizontal="true" />
 
@@ -113,7 +113,7 @@
             android:layout_marginTop="68dp"
             android:layout_marginEnd="141dp"
             app:srcCompat="@drawable/usuario"
-            app:tint="@color/primaryText" />
+            app:tint="@color/title" />
 
         <EditText
             android:id="@+id/editTextContraseña"
@@ -122,9 +122,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="426dp"
-            android:layout_marginEnd="133dp"
+            android:layout_marginEnd="85dp"
             android:background="#ffffff"
-            android:ems="10"
+            android:ems="12"
             android:hint="@string/hint5"
             android:inputType="textPassword" />
 
@@ -135,9 +135,9 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="338dp"
-            android:layout_marginEnd="132dp"
+            android:layout_marginEnd="85dp"
             android:background="#ffffff"
-            android:ems="10"
+            android:ems="12"
             android:hint="@string/hint4"
             android:inputType="textEmailAddress" />
 

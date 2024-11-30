@@ -1,5 +1,5 @@
 <!-- Archivo: res/drawable/circular_button_background.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/card" />
+    <solid android:color="@color/background" />
     <corners android:radius="500dp" /> <!-- El radio debe ser la mitad del ancho/alto para un círculo perfecto -->
 </shape>

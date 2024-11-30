@@ -24,9 +24,10 @@
     <EditText
         android:id="@+id/transcriptionBox"
         android:layout_width="380dp"
-        android:layout_height="600dp"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
+        android:layout_marginBottom="140dp"
         android:background="@color/card"
         android:gravity="top"
         android:hint="@string/hint1"

@@ -10,5 +10,6 @@
     <color name="primaryText">#E4E6EB</color>
     <color name="secondaryText">#B0B3B8</color>
     <color name="secondCard">#3A3B3C</color>
+    <color name="title">#FFFFFF</color>
 
 </resources>
