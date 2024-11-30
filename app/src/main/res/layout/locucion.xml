@@ -14,7 +14,7 @@
     <EditText
         android:id="@+id/locutionBox"
         android:layout_width="380dp"
-        android:layout_height="540dp"
+        android:layout_height="450dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
         android:background="#334455"
@@ -31,6 +31,7 @@
 
     <TextView
         style="@style/Letra_Normal"
+        android:id="@+id/titleLocution"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
@@ -86,47 +87,44 @@
         app:tint="@color/primaryText" />
 
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="175dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="115dp"
-        android:layout_weight="1"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/Play"
-        app:srcCompat="@drawable/play"
-        app:tint="@color/primaryText" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="50dp">
 
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/eliminar"
-        app:tint="@color/primaryText" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Phrases"
+            app:srcCompat="@drawable/chat"
+            app:tint="@color/primaryText" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/Phrases"
-        app:srcCompat="@drawable/chat"
-        app:tint="@color/primaryText" />
+        <ImageButton
+            android:id="@+id/playLocution"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="50dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/Play"
+            app:srcCompat="@drawable/play"
+            app:tint="@color/primaryText" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/eliminar"
+            app:tint="@color/primaryText" />
+    </LinearLayout>
+
 
 
 </RelativeLayout>
