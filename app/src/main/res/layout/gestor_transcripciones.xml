@@ -106,7 +106,7 @@
     <!-- Pie de página -->
 
     <Button
-        android:id="@+id/newTranscriptionButton"
+        android:id="@+id/boton_AñadirTrans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/card"

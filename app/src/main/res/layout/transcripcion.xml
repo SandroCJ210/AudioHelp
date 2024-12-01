@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
 
@@ -43,7 +42,7 @@
 
 
     <ImageButton
-        android:id="@+id/cerrar_transcripcion"
+        android:id="@+id/Retroceder"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
@@ -56,7 +55,7 @@
         app:tint="@color/primaryText" />
 
     <ImageButton
-        android:id="@+id/transcripciones_guardadas"
+        android:id="@+id/Guardar_Trans"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentStart="true"
@@ -82,7 +81,7 @@
         app:tint="@color/primaryText" />
 
     <ImageButton
-        android:id="@+id/borrar_transcripcion"
+        android:id="@+id/Borrar_Trans"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentEnd="true"

@@ -51,7 +51,7 @@
 
     <!-- Botón: Iniciar sesión -->
     <LinearLayout
-        android:id="@+id/btn_iniciar_sesion"
+        android:id="@+id/boton_cuenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
@@ -78,9 +78,10 @@
 
     <!-- Botón: Tutorial-->
     <LinearLayout
+        android:id="@+id/boton_tutorial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_iniciar_sesion"
+        android:layout_below="@id/boton_cuenta"
         android:layout_marginBottom="16dp"
         android:background="?attr/selectableItemBackground"
         android:gravity="center_vertical"
@@ -105,7 +106,7 @@
     <!-- Botón: Configuración -->
 
     <LinearLayout
-        android:id="@+id/btn_configuracion"
+        android:id="@+id/boton_config"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

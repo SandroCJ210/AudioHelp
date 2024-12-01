@@ -12,7 +12,7 @@ public class Transcripcion_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transcripcion);
 
-        ImageButton btnCerrar = findViewById(R.id.cerrar_transcripcion);
+        ImageButton btnCerrar = findViewById(R.id.Retroceder);
         btnCerrar.setOnClickListener(v -> {
             Intent intent = new Intent(Transcripcion_activity.this, Menu_Transcripciones_activity.class);
             startActivity(intent);

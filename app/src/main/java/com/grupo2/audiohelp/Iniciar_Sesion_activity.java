@@ -13,7 +13,7 @@ public class Iniciar_Sesion_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inicio_sesion);
 
-        Button BtonLocucion = findViewById(R.id.buttonRegistrarse);
+        Button BtonLocucion = findViewById(R.id.Registrarse);
         BtonLocucion.setOnClickListener(w -> {
             Intent intent = new Intent(Iniciar_Sesion_activity.this, Registrar_datos_activity.class);
             startActivity(intent);
