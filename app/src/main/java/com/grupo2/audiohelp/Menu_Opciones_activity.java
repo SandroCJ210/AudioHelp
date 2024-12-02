@@ -1,6 +1,7 @@
 package com.grupo2.audiohelp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
@@ -12,6 +13,16 @@ public class Menu_Opciones_activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Cargar tema desde SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("AppSettingsPrefs", MODE_PRIVATE);
+        boolean isDarkMode = sharedPreferences.getBoolean("isDarkMode", false);
+        if (isDarkMode) {
+            setTheme(R.style.DarkTheme);  // Aplicar tema oscuro
+        } else {
+            setTheme(R.style.LightTheme);  // Aplicar tema claro
+        }
+
         setContentView(R.layout.menu_opciones);
 
         LinearLayout btnIniciarSesion = findViewById(R.id.boton_cuenta);

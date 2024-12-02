@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?attr/colorPrimary"
     android:orientation="vertical"
     android:padding="16dp">
 
     <!-- Título -->
-    <TextView
-        android:id="@+id/textViewTitulo"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/title_config"
-        android:textColor="@color/title"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="8dp"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"> <!-- Centra verticalmente los elementos -->
+
+        <!-- TextView alineado a la izquierda -->
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_config"
+            android:textColor="?android:textColor"
+            android:background="?attr/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- ImageButton alineado a la derecha -->
+        <ImageButton
+            android:id="@+id/ButtonAtras"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/retroceder" />
+    </LinearLayout>
+
 
     <!-- Botón para cambiar la fuente -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@color/card"
+        android:background="?android:attr/windowBackground"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -31,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/font"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColor"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -41,44 +64,43 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/font_description"
-            android:textColor="@color/secondaryText"
-            android:textSize="14sp" />
+            android:textColor="?android:textColor"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
-    <!-- Botón para cambiar el color y tema -->
+    <!-- Switch para cambiar Tema -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@color/card"
-        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:background="?android:attr/windowBackground"
+        android:orientation="horizontal"
         android:padding="12dp">
 
         <TextView
-            android:id="@+id/textTituloColorTema"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/temas"
-            android:textColor="@color/primaryText"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="Modo Oscuro"
+            android:textColor="?android:textColor"
+            android:textStyle="bold"
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textDescripcionColorTema"
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_tema"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/temas_descripcion"
-            android:textColor="@color/secondaryText"
-            android:textSize="14sp" />
+            android:checked="false"
+            android:textColor="#FCF5FD" />
     </LinearLayout>
 
-    <!-- Botón para cambiar el color y tema -->
+    <!-- Botón para cambiar voz -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@color/card"
+        android:background="?android:attr/windowBackground"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -87,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/voice_change"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColor"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -97,8 +119,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/voices_description"
-            android:textColor="@color/secondaryText"
-            android:textSize="14sp" />
+            android:textColor="?android:textColor"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
     <!-- Switch para autocorrección -->
@@ -106,7 +129,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="@color/card"
+        android:background="?android:attr/windowBackground"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -115,8 +138,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/critic_sounds"
-            android:textColor="#FCF5FD"
-            android:textSize="16sp" />
+            android:textColor="?android:textColor"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchAutocorreccion"
@@ -130,7 +154,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@color/card"
+        android:background="?android:attr/windowBackground"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -139,15 +163,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/background_mode"
-            android:textColor="#FCF5FD"
-            android:textSize="16sp" />
+            android:textColor="?android:textColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switchSegundoPlano"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
-            android:textColor="#FCF5FD" />
+            android:textColor="#FCF5FD"
+            />
     </LinearLayout>
 
     <!-- Pie de página -->
@@ -156,7 +182,7 @@
         android:id="@+id/saveConfigButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/card"
+        android:backgroundTint="?android:attr/windowBackground"
         android:text="@string/save_button" />
 
     <TextView
@@ -166,7 +192,10 @@
         android:layout_marginTop="180dp"
         android:gravity="center"
         android:text="@string/version_text"
-        android:textColor="#49454F"
-        android:textSize="12sp" />
+        android:textColor="?android:textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="?attr/colorPrimary"/>
+
 
 </LinearLayout>
