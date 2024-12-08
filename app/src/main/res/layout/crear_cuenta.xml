@@ -11,13 +11,12 @@
     tools:context=".RegistroActivity"
     >
     <ImageButton
-        android:id="@+id/regresarOpciones"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="170dp"
         android:background="#006B7683"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/retroceder" />
+        app:tint="@color/background" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +62,8 @@
                 android:hint="@string/hint4"
                 android:drawableStart="@drawable/candado"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:inputType="textPassword"/>
 
             <Button
                 android:layout_width="match_parent"
