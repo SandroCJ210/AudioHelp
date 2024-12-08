@@ -28,7 +28,6 @@
             android:background="?attr/colorPrimary"
             android:textSize="24sp"
             android:textStyle="bold" />
-
         <!-- ImageButton alineado a la derecha -->
         <ImageButton
             android:id="@+id/ButtonAtras"
