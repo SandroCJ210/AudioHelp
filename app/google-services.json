@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "482908524044",
+    "project_id": "audiohelpuni",
+    "storage_bucket": "audiohelpuni.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482908524044:android:eeb7550da17d6bd6526829",
+        "android_client_info": {
+          "package_name": "com.grupo2.audiohelp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsmmtUEbmuAHtNR18jK1fgu7osU_FCrA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
