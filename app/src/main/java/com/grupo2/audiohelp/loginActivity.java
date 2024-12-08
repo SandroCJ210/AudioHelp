@@ -7,7 +7,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Iniciar_Sesion_activity extends AppCompatActivity {
+public class loginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,13 +15,13 @@ public class Iniciar_Sesion_activity extends AppCompatActivity {
 
         Button BtonLocucion = findViewById(R.id.Registrarse);
         BtonLocucion.setOnClickListener(w -> {
-            Intent intent = new Intent(Iniciar_Sesion_activity.this, Registrar_datos_activity.class);
+            Intent intent = new Intent(loginActivity.this, RegistroActivity.class);
             startActivity(intent);
         });
 
         ImageButton btnRetroceder = findViewById(R.id.imageButton);
         btnRetroceder.setOnClickListener(v -> {
-            Intent intent = new Intent(Iniciar_Sesion_activity.this, Menu_Opciones_activity.class);
+            Intent intent = new Intent(loginActivity.this, Menu_Opciones_activity.class);
             startActivity(intent);
         });
 

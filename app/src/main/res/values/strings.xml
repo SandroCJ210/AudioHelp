@@ -36,7 +36,7 @@
     <string name="save_button">Guardar configuración</string>
     <string name="new_transcription">Nueva Transcripción</string>
     <string name="button_ingresar">Ingresar</string>
-    <string name="button_registrar">Registrarse</string>
+    <string name="button_registrar">Registrar</string>
 
 
     <!-- Descripciones -->
@@ -53,12 +53,11 @@
 
     <!-- hints -->
     <string name="hint1">Aquí aparecerá la transcripción...</string>
-    <string name="hint2">Nombre(s)</string>
-    <string name="hint3">Apellido(s)</string>
-    <string name="hint4">Ingresa tu email</string>
-    <string name="hint5">Ingresa tu contraseña</string>
-    <string name="hint6">Ingresa tu teléfono</string>
-    <string name="hint7">¿Olvidaste tu contraseña?</string>
+    <string name="hint2">Nombre</string>
+    <string name="hint3">Email</string>
+    <string name="hint4">Contraseña</string>
+    <string name="hint5">¿Ya estás registrado?</string>
+    <string name="hint6">¿No tienes cuenta?</string>
 
 
 </resources>

@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GuardarTranscripciones_activity extends AppCompatActivity {
+public class GestorTranscripcionesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,7 @@ public class GuardarTranscripciones_activity extends AppCompatActivity {
 
         Button BtonAgregar = findViewById(R.id.boton_AñadirTrans);
         BtonAgregar.setOnClickListener(w -> {
-            Intent intent = new Intent(GuardarTranscripciones_activity.this, Menu_Transcripciones_activity.class);
+            Intent intent = new Intent(GestorTranscripcionesActivity.this, MenuTranscripcionesActivity.class);
             startActivity(intent);
         });
     }

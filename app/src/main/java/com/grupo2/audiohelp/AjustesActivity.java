@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Ajustes_activity extends AppCompatActivity {
+public class AjustesActivity extends AppCompatActivity {
     private SwitchCompat switchTheme;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -52,7 +52,7 @@ public class Ajustes_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Crea un Intent para regresar al MenuOpcionesActivity
-                Intent intent = new Intent(Ajustes_activity.this, Menu_Opciones_activity.class);
+                Intent intent = new Intent(AjustesActivity.this, Menu_Opciones_activity.class);
                 startActivity(intent);  // Inicia la actividad MenuOpcionesActivity
                 finish();  // Finaliza la actividad actual (AjustesActivity)
             }

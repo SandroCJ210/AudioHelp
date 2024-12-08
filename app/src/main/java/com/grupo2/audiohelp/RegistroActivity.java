@@ -6,7 +6,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Registrar_datos_activity extends AppCompatActivity {
+public class RegistroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,7 @@ public class Registrar_datos_activity extends AppCompatActivity {
 
         ImageButton btnRetroceder = findViewById(R.id.imageButton);
         btnRetroceder.setOnClickListener(v -> {
-            Intent intent = new Intent(Registrar_datos_activity.this, Iniciar_Sesion_activity.class);
+            Intent intent = new Intent(RegistroActivity.this, loginActivity.class);
             startActivity(intent);
         });
 

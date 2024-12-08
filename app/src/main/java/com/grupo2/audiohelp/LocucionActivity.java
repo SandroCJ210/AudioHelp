@@ -15,9 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Locale;
-
-public class Locucion_activity extends AppCompatActivity {
+public class LocucionActivity extends AppCompatActivity {
 
     private TextToSpeech textToSpeech;
     private EditText locutionBox;

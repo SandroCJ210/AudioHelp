@@ -6,7 +6,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Gestor_frases_activity extends AppCompatActivity {
+public class GestorFrasesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,7 @@ public class Gestor_frases_activity extends AppCompatActivity {
 
         ImageButton btnCerrar = findViewById(R.id.buttonClose);
         btnCerrar.setOnClickListener(v -> {
-            Intent intent = new Intent(Gestor_frases_activity.this, Menu_Locuciones_activity.class);
+            Intent intent = new Intent(GestorFrasesActivity.this, MenuLocucionesActivity.class);
             startActivity(intent);
         });
     }

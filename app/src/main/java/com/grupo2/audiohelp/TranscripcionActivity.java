@@ -6,7 +6,7 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Transcripcion_activity extends AppCompatActivity {
+public class TranscripcionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,7 @@ public class Transcripcion_activity extends AppCompatActivity {
 
         ImageButton btnCerrar = findViewById(R.id.Retroceder);
         btnCerrar.setOnClickListener(v -> {
-            Intent intent = new Intent(Transcripcion_activity.this, Menu_Transcripciones_activity.class);
+            Intent intent = new Intent(TranscripcionActivity.this, MenuTranscripcionesActivity.class);
             startActivity(intent);
         });
     }

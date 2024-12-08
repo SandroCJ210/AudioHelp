@@ -32,19 +32,19 @@ public class Menu_Opciones_activity extends AppCompatActivity {
 
         // Opciones ----> Inicio sesión
         btnIniciarSesion.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, Iniciar_Sesion_activity.class);
+            Intent intent = new Intent(Menu_Opciones_activity.this, loginActivity.class);
             startActivity(intent);
         });
 
         // Opciones ----> Ajustes
         btnConfiguracion.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, Ajustes_activity.class);
+            Intent intent = new Intent(Menu_Opciones_activity.this, AjustesActivity.class);
             startActivity(intent);
         });
 
         // Opciones ----> Menu de Transcripciones
         btnRetroceder.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, Menu_Transcripciones_activity.class);
+            Intent intent = new Intent(Menu_Opciones_activity.this, MenuTranscripcionesActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
