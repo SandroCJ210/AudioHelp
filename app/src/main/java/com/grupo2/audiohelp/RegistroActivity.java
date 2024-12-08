@@ -12,11 +12,6 @@ public class RegistroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.crear_cuenta);
 
-        ImageButton btnRetroceder = findViewById(R.id.imageButton);
-        btnRetroceder.setOnClickListener(v -> {
-            Intent intent = new Intent(RegistroActivity.this, loginActivity.class);
-            startActivity(intent);
-        });
 
     }
 

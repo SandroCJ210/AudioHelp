@@ -32,7 +32,7 @@ public class Menu_Opciones_activity extends AppCompatActivity {
 
         // Opciones ----> Inicio sesión
         btnIniciarSesion.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, loginActivity.class);
+            Intent intent = new Intent(Menu_Opciones_activity.this, LoginActivity.class);
             startActivity(intent);
         });
 
