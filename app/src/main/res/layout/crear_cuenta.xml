@@ -10,7 +10,14 @@
     android:background="@color/background"
     tools:context=".RegistroActivity"
     >
-
+    <ImageButton
+        android:id="@+id/regresarOpciones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="170dp"
+        android:background="#006B7683"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/retroceder" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,6 +73,7 @@
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/black"
+                android:textColor="@color/white"
                 app:cornerRadius = "20dp"/>
 
             <TextView
