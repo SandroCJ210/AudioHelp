@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 public class MenuCuentaActivity extends AppCompatActivity {
 
     private Button btnVolver;
+    private Button btnCerrarSesion;
     private FirebaseAuth autorizador;
     private FirebaseUser currentUser;
     private Button btnUpdateProfile;
@@ -63,6 +65,18 @@ public class MenuCuentaActivity extends AppCompatActivity {
         // Lógica para actualizar datos del perfil
         btnUpdateProfile.setOnClickListener(v -> {
             // Aquí agregarás la lógica de actualización de datos del perfil
+        });
+
+        // Botón para cerrar sesión
+        btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
+        btnCerrarSesion.setOnClickListener(v -> {
+            // Cerrar sesión de Firebase
+            autorizador.signOut();
+            // Mensaje de confirmación
+            Toast.makeText(MenuCuentaActivity.this, "Sesión cerrada.", Toast.LENGTH_SHORT).show();
+            // Redirigir a la pantalla de login
+            startActivity(new Intent(MenuCuentaActivity.this, LoginActivity.class));
+            finish(); // Finaliza la actividad actual
         });
 
         // Volver al menú anterior

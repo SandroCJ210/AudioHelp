@@ -93,7 +93,7 @@ public class RegistroActivity extends AppCompatActivity {
         });
     }
 
-    // Método para crear el usuario en Firestore
+    // Metodo para crear el usuario en Firestore
     private void createUserInFirestore(String uid, String nombre, String email) {
         DocumentReference userDocRef = db.collection("users").document(uid);
 
