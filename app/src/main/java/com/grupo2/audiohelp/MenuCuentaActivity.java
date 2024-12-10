@@ -46,6 +46,7 @@ public class MenuCuentaActivity extends AppCompatActivity {
             autorizador.signOut(); // Asegúrate de cerrar la sesión
             startActivity(new Intent(MenuCuentaActivity.this, LoginActivity.class));
             finish();
+            return;
         }
         // Mostrar el correo electrónico
         if (currentUser != null) {
