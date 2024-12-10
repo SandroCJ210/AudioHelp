@@ -1,5 +1,8 @@
 package com.grupo2.audiohelp;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -65,4 +68,14 @@ public class FraseManager {
         Frase nuevaFrase = new Frase(id, texto);
         return nuevaFraseRef.set(nuevaFrase);
     }
+
+    public Task<Void> eliminarFrase(String id) {
+        return db.collection("users")
+                .document(userId)
+                .collection("phrases")
+                .document(id)
+                .delete();
+    }
+
+
 }
