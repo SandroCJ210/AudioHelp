@@ -38,6 +38,15 @@ public class MenuCuentaActivity extends AppCompatActivity {
         btnUpdateProfile = findViewById(R.id.btnUpdateProfile);
         btnVolver = findViewById(R.id.salir_cuenta_1);
 
+        // Verificar si el usuario está autenticado
+        if (currentUser == null) {
+            // Si no hay usuario autenticado (usuario eliminado o no existe)
+            Toast.makeText(MenuCuentaActivity.this, "Tu cuenta ha sido eliminada o no existe.", Toast.LENGTH_SHORT).show();
+            // Cerrar sesión y redirigir al Login
+            autorizador.signOut(); // Asegúrate de cerrar la sesión
+            startActivity(new Intent(MenuCuentaActivity.this, LoginActivity.class));
+            finish();
+        }
         // Mostrar el correo electrónico
         if (currentUser != null) {
             String email = currentUser.getEmail();
@@ -84,5 +93,7 @@ public class MenuCuentaActivity extends AppCompatActivity {
             Intent intent = new Intent(MenuCuentaActivity.this, MenuOpcionesActivity.class);
             startActivity(intent);
         });
+
+
     }
 }
