@@ -26,7 +26,7 @@ public class MenuTranscripcionesActivity extends AppCompatActivity {
         });
         Button btnMenu = findViewById(R.id.BtnOpciones);
         btnMenu.setOnClickListener(w -> {
-            Intent intent = new Intent(MenuTranscripcionesActivity.this, Menu_Opciones_activity.class);
+            Intent intent = new Intent(MenuTranscripcionesActivity.this, MenuOpcionesActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         });

@@ -52,7 +52,7 @@ public class AjustesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Crea un Intent para regresar al MenuOpcionesActivity
-                Intent intent = new Intent(AjustesActivity.this, Menu_Opciones_activity.class);
+                Intent intent = new Intent(AjustesActivity.this, MenuOpcionesActivity.class);
                 startActivity(intent);  // Inicia la actividad MenuOpcionesActivity
                 finish();  // Finaliza la actividad actual (AjustesActivity)
             }

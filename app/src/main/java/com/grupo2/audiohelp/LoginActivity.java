@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
                                         Toast.makeText(LoginActivity.this, "Ingreso correcto.", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LoginActivity.this, Menu_Opciones_activity.class));
+                                        startActivity(new Intent(LoginActivity.this, MenuOpcionesActivity.class));
                                         finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         btnRetroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                startActivity(new Intent(LoginActivity.this, Menu_Opciones_activity.class));
+                startActivity(new Intent(LoginActivity.this, MenuOpcionesActivity.class));
             }
         });
 
