@@ -54,13 +54,6 @@ public class MenuOpcionesActivity extends AppCompatActivity {
             }
         });
 
-
-        // Opciones ----> Inicio sesión
-        /*btnIniciarSesion.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuOpcionesActivity.this, LoginActivity.class);
-            startActivity(intent);
-        });*/
-
         // Opciones ----> Ajustes
         btnConfiguracion.setOnClickListener(v -> {
             Intent intent = new Intent(MenuOpcionesActivity.this, AjustesActivity.class);

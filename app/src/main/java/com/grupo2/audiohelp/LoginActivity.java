@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -52,9 +53,33 @@ public class LoginActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
                                         Toast.makeText(LoginActivity.this, "Ingreso correcto.", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LoginActivity.this, MenuOpcionesActivity.class));
-                                        finish();
+
+                                        // Obtener el UID del usuario logueado
+                                        String uid = autorizador.getCurrentUser().getUid();
+
+                                        // Acceder a la colección de usuarios en Firestore
+                                        FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                        db.collection("users").document(uid)
+                                                .get()
+                                                .addOnSuccessListener(documentSnapshot -> {
+                                                    if (documentSnapshot.exists()) {
+                                                        // Obtener el nombre del usuario
+                                                        String nombre = documentSnapshot.getString("nombre");
+
+                                                        // Pasar el nombre a la siguiente actividad
+                                                        Intent intent = new Intent(LoginActivity.this, MenuOpcionesActivity.class);
+                                                        intent.putExtra("nombre_usuario", nombre);  // Pasar el nombre
+                                                        startActivity(intent);
+                                                        finish();  // Finalizar LoginActivity
+                                                    } else {
+                                                        Toast.makeText(LoginActivity.this, "Usuario no encontrado en la base de datos.", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                })
+                                                .addOnFailureListener(e -> {
+                                                    Toast.makeText(LoginActivity.this, "Error al obtener los datos del usuario.", Toast.LENGTH_SHORT).show();
+                                                });
                                     }
+
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
