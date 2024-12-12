@@ -1,5 +1,6 @@
 package com.grupo2.audiohelp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.speech.tts.UtteranceProgressListener;
 import android.graphics.Color;
@@ -31,6 +32,9 @@ public class LocucionActivity extends AppCompatActivity {
         // Botón de reproducción
         ImageButton playButton = findViewById(R.id.playLocution);
 
+        // Botón de retroceso
+        ImageButton retrocederButton = findViewById(R.id.Retroceder);
+
         // Titulo
         TextView titleLocution = findViewById(R.id.titleLocution);
 
@@ -56,6 +60,14 @@ public class LocucionActivity extends AppCompatActivity {
                 titleLocution.setTextColor(Color.parseColor("#90EE90")); // Cambia color de titulo
                 textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, "TTS_SPEAKING");
             }
+        });
+
+        // Configurar botón de retroceso
+        retrocederButton.setOnClickListener(v -> {
+            Intent intent = new Intent(LocucionActivity.this, MenuLocucionesActivity.class);
+            startActivity(intent);
+            // Opcional: Finaliza el activity actual para no volver con el botón de retroceso
+            finish();
         });
 
         textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
