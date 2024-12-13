@@ -1,6 +1,7 @@
 package com.grupo2.audiohelp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,12 @@ public class FrasesAdapter extends RecyclerView.Adapter<FrasesAdapter.FraseViewH
 
             popup.setOnMenuItemClickListener(item -> {
                 if (item.getItemId() == R.id.menu_editar) {
+                    // Iniciar la actividad EditarFraseActivity
+                    Intent intent = new Intent(holder.itemView.getContext(), EditarFraseActivity.class);
+                    intent.putExtra("FRASE_TITULO", frase.getTitulo()); // Pasar el título de la frase
+                    intent.putExtra("FRASE_TEXTO", frase.getTexto());  // Pasar el texto de la frase
+                    holder.itemView.getContext().startActivity(intent); // Lanzar la actividad
+
                     return true;
                 } else if (item.getItemId() == R.id.menu_eliminar) {
                     eliminarFrase(holder.itemView.getContext(), frase);
