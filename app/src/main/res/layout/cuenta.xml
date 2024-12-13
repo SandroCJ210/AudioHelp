@@ -1,49 +1,93 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#18191A">
 
+    <!-- Botón de imagen en la parte superior izquierda -->
+    <ImageButton
+        android:id="@+id/btnVolver"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="start"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/retroceder"
+        android:layout_marginBottom="16dp"
+        app:tint="#FFFFFF" />
+
+    <!-- Foto de perfil -->
+    <ImageView
+        android:id="@+id/ivFotoPerfil"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/avatar"
+        android:scaleType="centerCrop" />
+
+    <!-- Nombre centrado -->
     <TextView
+        android:id="@+id/tvNombreUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a tu perfil"
-        android:textSize="18sp" />
+        android:text="NOMBRE"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre" />
-
+    <!-- Campo de Correo Electrónico -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Correo Electrónico"
-        android:enabled="false" />
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#303030"
+        android:padding="12dp"
+        android:enabled="false"
+        android:layout_marginBottom="24dp"
+        android:inputType="textEmailAddress" />
 
-    <Button
-        android:id="@+id/btnUpdateProfile"
+    <!-- Campo contraseña nueva -->
+    <EditText
+        android:id="@+id/etpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Actualizar Perfil" />
+        android:hint="Nueva contraseña"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#303030"
+        android:padding="12dp"
+        android:enabled="true"
+        android:layout_marginBottom="24dp"
+        android:inputType="textPassword" />
 
+    <!-- Botón Cambiar Contraseña -->
+    <Button
+        android:id="@+id/btnCambiarContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Contraseña"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#505050"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+    <!-- Botón Cerrar Sesión -->
     <Button
         android:id="@+id/btnCerrarSesion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cerrar sesión"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#FF5555"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
 
 
-    <Button
-        android:id="@+id/salir_cuenta_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="100dp"
-        android:text="salir ->" />
 </LinearLayout>

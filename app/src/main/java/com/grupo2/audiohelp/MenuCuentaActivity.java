@@ -2,27 +2,31 @@ package com.grupo2.audiohelp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.DocumentSnapshot;
 
 public class MenuCuentaActivity extends AppCompatActivity {
 
-    private Button btnVolver;
+    private ImageButton btnVolver;
     private Button btnCerrarSesion;
+    private Button btnCambiarContrasena;
     private FirebaseAuth autorizador;
     private FirebaseUser currentUser;
-    private Button btnUpdateProfile;
-    private TextView tvNombreUsuario;  // Este será el TextView donde mostrarás el nombre
+    private TextView tvNombreUsuario;
+    private EditText etPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,68 +37,116 @@ public class MenuCuentaActivity extends AppCompatActivity {
         currentUser = autorizador.getCurrentUser();
 
         // Referencia a los elementos de la interfaz
-        tvNombreUsuario = findViewById(R.id.etName);  // Asegúrate de tener un TextView con este ID
+        tvNombreUsuario = findViewById(R.id.tvNombreUsuario);
         EditText etEmail = findViewById(R.id.etEmail);
-        btnUpdateProfile = findViewById(R.id.btnUpdateProfile);
-        btnVolver = findViewById(R.id.salir_cuenta_1);
+        etPass = findViewById(R.id.etpass); // Campo para la nueva contraseña
+        btnVolver = findViewById(R.id.btnVolver);
+        btnCambiarContrasena = findViewById(R.id.btnCambiarContrasena);
 
         // Verificar si el usuario está autenticado
         if (currentUser == null) {
-            // Si no hay usuario autenticado (usuario eliminado o no existe)
             Toast.makeText(MenuCuentaActivity.this, "Tu cuenta ha sido eliminada o no existe.", Toast.LENGTH_SHORT).show();
-            // Cerrar sesión y redirigir al Login
-            autorizador.signOut(); // Asegúrate de cerrar la sesión
+            autorizador.signOut();
             startActivity(new Intent(MenuCuentaActivity.this, LoginActivity.class));
             finish();
             return;
         }
+
         // Mostrar el correo electrónico
-        if (currentUser != null) {
-            String email = currentUser.getEmail();
+        String email = currentUser.getEmail();
+        if (email != null) {
             etEmail.setText(email);
-
-            // Obtener el nombre del usuario desde Firestore
-            FirebaseFirestore db = FirebaseFirestore.getInstance();
-            String uid = currentUser.getUid();
-
-            db.collection("users").document(uid)
-                    .get()
-                    .addOnSuccessListener(documentSnapshot -> {
-                        if (documentSnapshot.exists()) {
-                            String nombre = documentSnapshot.getString("nombre");
-                            // Mostrar el nombre del usuario en el TextView
-                            tvNombreUsuario.setText(nombre); // Puedes personalizar el mensaje
-                        }
-                    })
-                    .addOnFailureListener(e -> {
-                        // Manejar el error si no se encuentra el documento
-                        tvNombreUsuario.setText("Error al obtener el nombre.");
-                    });
+        } else {
+            etEmail.setText("Correo no disponible");
         }
 
-        // Lógica para actualizar datos del perfil
-        btnUpdateProfile.setOnClickListener(v -> {
-            // Aquí agregarás la lógica de actualización de datos del perfil
+        // Obtener el nombre del usuario desde Firestore
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        String uid = currentUser.getUid();
+
+        db.collection("users").document(uid)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    if (documentSnapshot.exists()) {
+                        String nombre = documentSnapshot.getString("nombre");
+                        if (nombre != null && !nombre.isEmpty()) {
+                            tvNombreUsuario.setText(nombre);
+                        } else {
+                            tvNombreUsuario.setText("Nombre no disponible");
+                        }
+                    } else {
+                        tvNombreUsuario.setText("Usuario no encontrado");
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    tvNombreUsuario.setText("Error al obtener el nombre.");
+                });
+
+        // Botón para cambiar la contraseña
+        btnCambiarContrasena.setOnClickListener(v -> {
+            String nuevaContrasena = etPass.getText().toString().trim();
+
+            if (TextUtils.isEmpty(nuevaContrasena)) {
+                Toast.makeText(MenuCuentaActivity.this, "Por favor, ingresa una nueva contraseña.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (nuevaContrasena.length() < 6) {
+                Toast.makeText(MenuCuentaActivity.this, "La contraseña debe tener al menos 6 caracteres.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Mostrar un cuadro de diálogo para pedir la contraseña actual
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Reautenticación necesaria");
+            builder.setMessage("Ingresa tu contraseña actual para cambiar la contraseña.");
+            final EditText inputPassword = new EditText(this);
+            inputPassword.setHint("Contraseña actual");
+            builder.setView(inputPassword);
+
+            builder.setPositiveButton("Confirmar", (dialog, which) -> {
+                String passwordActual = inputPassword.getText().toString().trim();
+                if (TextUtils.isEmpty(passwordActual)) {
+                    Toast.makeText(MenuCuentaActivity.this, "Debes ingresar tu contraseña actual.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Reautenticación con el correo del usuario y su contraseña actual
+                AuthCredential credential = EmailAuthProvider.getCredential(currentUser.getEmail(), passwordActual);
+                currentUser.reauthenticate(credential)
+                        .addOnSuccessListener(unused -> {
+                            // Si la reautenticación es exitosa, cambiar la contraseña
+                            currentUser.updatePassword(nuevaContrasena)
+                                    .addOnSuccessListener(unused1 -> {
+                                        Toast.makeText(MenuCuentaActivity.this, "Contraseña actualizada exitosamente.", Toast.LENGTH_SHORT).show();
+                                        etPass.setText(""); // Limpiar el campo después de actualizar la contraseña
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        Toast.makeText(MenuCuentaActivity.this, "Error al actualizar la contraseña: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    });
+                        })
+                        .addOnFailureListener(e -> {
+                            Toast.makeText(MenuCuentaActivity.this, "Reautenticación fallida: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+            });
+
+            builder.setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss());
+            builder.show();
         });
 
         // Botón para cerrar sesión
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         btnCerrarSesion.setOnClickListener(v -> {
-            // Cerrar sesión de Firebase
             autorizador.signOut();
-            // Mensaje de confirmación
             Toast.makeText(MenuCuentaActivity.this, "Sesión cerrada.", Toast.LENGTH_SHORT).show();
-            // Redirigir a la pantalla de login
             startActivity(new Intent(MenuCuentaActivity.this, LoginActivity.class));
-            finish(); // Finaliza la actividad actual
+            finish();
         });
 
-        // Volver al menú anterior
+        // Botón para volver al menú anterior
         btnVolver.setOnClickListener(v -> {
             Intent intent = new Intent(MenuCuentaActivity.this, MenuOpcionesActivity.class);
             startActivity(intent);
         });
-
-
     }
 }
