@@ -1,6 +1,8 @@
 package com.grupo2.audiohelp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.speech.tts.UtteranceProgressListener;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -31,6 +33,15 @@ public class LocucionActivity extends AppCompatActivity {
         // Botón de reproducción
         ImageButton playButton = findViewById(R.id.playLocution);
 
+        // Botón de retroceso
+        ImageButton retrocederButton = findViewById(R.id.Retroceder);
+
+        // Botón de frases guardadas
+        ImageButton botonFrasesGuardadas = findViewById(R.id.botonFrasesGuardadas);
+
+        // Boton de borrar locución
+        ImageButton borrarLocucion = findViewById(R.id.borrarLocucion);
+
         // Titulo
         TextView titleLocution = findViewById(R.id.titleLocution);
 
@@ -56,6 +67,25 @@ public class LocucionActivity extends AppCompatActivity {
                 titleLocution.setTextColor(Color.parseColor("#90EE90")); // Cambia color de titulo
                 textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null, "TTS_SPEAKING");
             }
+        });
+
+        // Configurar botón de retroceso
+        retrocederButton.setOnClickListener(v -> {
+            Intent intent = new Intent(LocucionActivity.this, MenuLocucionesActivity.class);
+            startActivity(intent);
+            // Opcional: Finaliza el activity actual para no volver con el botón de retroceso
+            finish();
+        });
+
+        // Botón para ver frases
+        botonFrasesGuardadas.setOnClickListener(v -> {
+            // Crear un Intent para ir a GestorFrasesActivity
+            Intent intent = new Intent(LocucionActivity.this, GestorFrasesActivity.class);
+            startActivity(intent);
+        });
+
+        borrarLocucion.setOnClickListener(v -> {
+            locutionBox.setText("");
         });
 
         textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
@@ -19,79 +20,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Contenedor para la lista -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="261dp"
-        android:layout_height="413dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#673AB7"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@id/boton_AñadirFrase"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFrases"
+        android:layout_width="350dp"
+        android:layout_height="580dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/buttonClose"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvAudioHelp">
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/card"
-            android:orientation="vertical"
-            android:padding="10dp">
-
-            <TextView
-                android:id="@+id/item1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1. Gracias"
-                android:textColor="@color/primaryText"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/item2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2. ¿Cómo estás?"
-                android:textColor="@color/primaryText"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/item3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3. Hola"
-                android:textColor="@color/primaryText"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/item4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4. Soy Jharvy y soy mudo"
-                android:textColor="@color/primaryText"
-                android:textSize="16sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-
-    <!-- Botón de añadir (+) -->
     <ImageButton
-        android:id="@+id/boton_AñadirFrase"
+        android:id="@+id/botonAgregarFrase"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginBottom="36dp"
         android:background="@android:color/transparent"
         android:src="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
         app:tint="@android:color/white" />
 
-
-    <!-- Botón de cerrar (X) -->
     <ImageButton
         android:id="@+id/buttonClose"
         android:layout_width="48dp"

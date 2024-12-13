@@ -9,7 +9,16 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Menu_Opciones_activity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+public class MenuOpcionesActivity extends AppCompatActivity {
+    private LinearLayout btnIniciarSesion;
+    private LinearLayout btnConfiguracion;
+    private Button btnRetroceder;
+    private LinearLayout btnTutorial;
+    private FirebaseAuth autorizador;
+    private FirebaseUser currentUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,31 +34,40 @@ public class Menu_Opciones_activity extends AppCompatActivity {
 
         setContentView(R.layout.menu_opciones);
 
-        LinearLayout btnIniciarSesion = findViewById(R.id.boton_cuenta);
-        LinearLayout btnConfiguracion = findViewById(R.id.boton_config);
-        Button btnRetroceder = findViewById(R.id.BtnTranscription3);
-        LinearLayout btnTutorial = findViewById(R.id.boton_tutorial);
+        btnIniciarSesion = findViewById(R.id.boton_cuenta);
+        btnConfiguracion = findViewById(R.id.boton_config);
+        btnRetroceder = findViewById(R.id.BtnTranscription3);
+        btnTutorial = findViewById(R.id.boton_tutorial);
 
-        // Opciones ----> Inicio sesión
+        autorizador = FirebaseAuth.getInstance();
+        currentUser = autorizador.getCurrentUser();
+
         btnIniciarSesion.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, LoginActivity.class);
-            startActivity(intent);
+            if (currentUser != null) {
+                // Usuario autenticado: Ir a cuenta.xml
+                Intent intent = new Intent(MenuOpcionesActivity.this, MenuCuentaActivity.class);
+                startActivity(intent);
+            } else {
+                // Usuario no autenticado: Ir a registrar.xml
+                Intent intent = new Intent(MenuOpcionesActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
         });
 
         // Opciones ----> Ajustes
         btnConfiguracion.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, AjustesActivity.class);
+            Intent intent = new Intent(MenuOpcionesActivity.this, AjustesActivity.class);
             startActivity(intent);
         });
 
         // Opciones ----> Menu de Transcripciones
         btnRetroceder.setOnClickListener(v -> {
-            Intent intent = new Intent(Menu_Opciones_activity.this, MenuTranscripcionesActivity.class);
+            Intent intent = new Intent(MenuOpcionesActivity.this, MenuTranscripcionesActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
 
-
+        // Opciones ----> Tutorial
         btnTutorial.setOnClickListener(v -> {
             String url = "https://youtu.be/k10xBs6--Q8?si=F0GusH0jYyVGM9ll&t=209";
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
