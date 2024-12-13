@@ -35,8 +35,6 @@ android {
 
 dependencies {
     implementation("com.assemblyai:assemblyai-java:4.0.0")
-    implementation(platform("com.google.cloud:libraries-bom:26.51.0"))
-    implementation("com.google.cloud:google-cloud-speech")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
