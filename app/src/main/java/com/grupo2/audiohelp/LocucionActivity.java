@@ -28,8 +28,13 @@ public class LocucionActivity extends AppCompatActivity {
         setContentView(R.layout.locucion);
 
         // Inicializar EditText
+        String fraseTexto = getIntent().getStringExtra("FRASE_TEXTO");
         locutionBox = findViewById(R.id.locutionBox);
-
+        if (fraseTexto != null) {
+            locutionBox.setText(fraseTexto);
+        } else {
+            locutionBox.setText("");
+        }
         // Botón de reproducción
         ImageButton playButton = findViewById(R.id.playLocution);
 

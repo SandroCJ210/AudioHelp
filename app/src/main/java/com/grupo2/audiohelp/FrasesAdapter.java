@@ -36,6 +36,15 @@ public class FrasesAdapter extends RecyclerView.Adapter<FrasesAdapter.FraseViewH
         Frase frase = listaFrases.get(position);
         holder.tvTituloFrase.setText(frase.getTitulo());
 
+        // Hacer clic en el ítem para abrir LocucionActivity
+        holder.itemView.setOnClickListener(v -> {
+            // Crear un Intent para abrir LocucionActivity
+            Intent intent = new Intent(holder.itemView.getContext(), LocucionActivity.class);
+            intent.putExtra("FRASE_TITULO", frase.getTitulo());  // Pasar el título de la frase
+            intent.putExtra("FRASE_TEXTO", frase.getTexto());    // Pasar el texto de la frase
+            holder.itemView.getContext().startActivity(intent);  // Lanzar la actividad
+        });
+
         holder.btnOpciones.setOnClickListener(v -> {
             PopupMenu popup = new PopupMenu(holder.itemView.getContext(), holder.btnOpciones);
             popup.inflate(R.menu.menu_frase_item); // Asegúrate de que este archivo XML existe
@@ -52,6 +61,12 @@ public class FrasesAdapter extends RecyclerView.Adapter<FrasesAdapter.FraseViewH
                     return true;
                 } else if (item.getItemId() == R.id.menu_eliminar) {
                     eliminarFrase(holder.itemView.getContext(), frase);
+                    return true;
+                } else if (item.getItemId() == R.id.menu_reproducir){
+                    Intent intent = new Intent(holder.itemView.getContext(), LocucionActivity.class);
+                    intent.putExtra("FRASE_TITULO", frase.getTitulo());  // Pasar el título de la frase
+                    intent.putExtra("FRASE_TEXTO", frase.getTexto());    // Pasar el texto de la frase
+                    holder.itemView.getContext().startActivity(intent);  // Lanzar la actividad
                     return true;
                 } else {
                     return false;
