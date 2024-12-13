@@ -23,18 +23,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TranscripcionActivity"/>
-        <activity android:name=".GestorTranscripcionesActivity"/>
-        <activity android:name=".MenuLocucionesActivity"/>
-        <activity android:name=".LocucionActivity"/>
-        <activity android:name=".AjustesActivity"/>
-        <activity android:name=".MenuOpcionesActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".RegistroActivity"/>
-        <activity android:name=".GestorFrasesActivity"/>
         <activity android:name="AgregarFraseActivity"/>
+        <activity android:name=".AjustesActivity"/>
+        <activity android:name=".GestorFrasesActivity"/>
+        <activity android:name=".GestorTranscripcionesActivity"/>
+        <activity android:name=".LocucionActivity"/>
+        <activity android:name=".LoginActivity"/>
         <activity android:name=".MenuCuentaActivity"/>
+        <activity android:name=".MenuLocucionesActivity"/>
+        <activity android:name=".MenuOpcionesActivity"/>
+        <activity android:name=".RegistroActivity"/>
+        <activity android:name=".TranscripcionActivity"/>
+
+
+
+
 
     </application>
 
