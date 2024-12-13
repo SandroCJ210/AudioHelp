@@ -4,15 +4,14 @@
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="?android:windowBackground">
 
 
     <!-- Título de la aplicación -->
     <TextView
         style="@style/Titulo_Aplicacion"
-        android:background="#00CDD7F9"
         android:text="@string/app_name"
-        android:textColor="@color/title"
+        android:textColor="?android:textColorPrimary"
         android:textSize="60sp" />
 
     <!-- Indicador de página -->
@@ -29,20 +28,20 @@
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/boton_inactivo"
-            android:backgroundTint="@color/secondCard" />
+            android:backgroundTint="?android:textColorSecondary" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/boton_inactivo"
-            android:backgroundTint="@color/secondCard" />
+            android:backgroundTint="?android:textColorPrimary" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:background="@drawable/boton_activo"
-            android:backgroundTint="@color/secondaryText" />
+            android:backgroundTint="?android:textColorSecondary" />
     </LinearLayout>
 
     <!-- Texto "Transcripción" -->
@@ -50,9 +49,8 @@
         style="@style/Letra_Normal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:background="#0049454F"
         android:text="@string/title_locucion"
-        android:textColor="@color/primaryText" />
+        android:textColor="?android:textColorPrimary" />
 
 
     <!-- Botón de transcripción (icono grande en el centro) -->
@@ -67,7 +65,8 @@
         android:padding="30dp"
         android:scaleType="fitCenter"
         android:src="@drawable/locucion_logo"
-        app:tint="@color/primaryText" />
+        android:backgroundTint="?android:colorAccent"
+        app:tint="?colorOnPrimary" />
 
     <!-- Opciones inferiores: Llamada de emergencia y Transcripciones guardadas -->
     <LinearLayout
@@ -94,13 +93,13 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/llamar"
-                app:tint="@color/primaryText" />
+                app:tint="?android:textColorPrimary" />
 
             <TextView
                 style="@style/Letra_Pequena"
                 android:gravity="center"
                 android:text="Llamada\nde Emergencia"
-                android:textColor="@color/secondaryText" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
 
         <!-- Transcripciones guardadas -->
@@ -117,13 +116,13 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/carpeta"
-                app:tint="@color/primaryText" />
+                app:tint="?android:textColorPrimary" />
 
             <TextView
                 style="@style/Letra_Pequena"
                 android:gravity="center"
                 android:text="Frases \nGuardadas"
-                android:textColor="@color/secondaryText" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
     </LinearLayout>
 

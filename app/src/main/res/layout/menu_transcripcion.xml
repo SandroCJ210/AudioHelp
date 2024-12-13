@@ -5,15 +5,14 @@
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="?android:windowBackground">
 
 
     <!-- Título de la aplicación -->
     <TextView
         style="@style/Titulo_Aplicacion"
-        android:background="#00CDD7F9"
         android:text="@string/app_name"
-        android:textColor="#FFFFFF" />
+        android:textColor="?android:textColorPrimary" />
 
     <!-- Indicador de página -->
     <LinearLayout
@@ -29,20 +28,20 @@
             android:layout_height="8dp"
             android:layout_marginEnd="4dp"
             android:background="@drawable/boton_inactivo"
-            android:backgroundTint="@color/secondCard" />
+            android:backgroundTint="?colorPrimary" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="4dp"
             android:background="@drawable/boton_activo"
-            android:backgroundTint="@color/secondaryText" />
+            android:backgroundTint="?colorOnPrimary" />
 
         <View
             android:layout_width="8dp"
             android:layout_height="8dp"
             android:background="@drawable/boton_inactivo"
-            android:backgroundTint="@color/secondCard" />
+            android:backgroundTint="?colorPrimary" />
     </LinearLayout>
 
     <!-- Texto "Transcripción" -->
@@ -50,9 +49,8 @@
         style="@style/Letra_Normal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:background="#0049454F"
         android:text="@string/transcripcion"
-        android:textColor="@color/primaryText"
+        android:textColor="?android:textColorPrimary"
         android:textSize="45sp" />
 
 
@@ -67,7 +65,8 @@
         android:padding="30dp"
         android:scaleType="centerInside"
         android:src="@drawable/transcripcion_logo"
-        app:tint="@color/primaryText"
+        app:tint="?colorOnPrimary"
+        android:backgroundTint="?android:colorAccent"
         tools:layout_centerHorizontal="true" />
 
     <!-- Opciones inferiores: Llamada de emergencia y Transcripciones guardadas -->
@@ -95,13 +94,13 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/llamar"
-                app:tint="@color/primaryText" />
+                app:tint="?colorOnPrimary" />
 
             <TextView
                 style="@style/Letra_Pequena"
                 android:gravity="center"
                 android:text="@string/call"
-                android:textColor="@color/secondaryText" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
 
         <!-- Transcripciones guardadas -->
@@ -118,13 +117,13 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:scaleType="centerInside"
                 android:src="@drawable/carpeta"
-                app:tint="@color/primaryText" />
+                app:tint="?colorOnPrimary" />
 
             <TextView
                 style="@style/Letra_Pequena"
                 android:gravity="center"
                 android:text="@string/historial"
-                android:textColor="@color/secondaryText" />
+                android:textColor="?android:textColorPrimary" />
         </LinearLayout>
     </LinearLayout>
 

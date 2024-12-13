@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/background"
+    android:background="?android:windowBackground"
     tools:context=".RegistroActivity"
     >
     <ImageButton
@@ -15,7 +15,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="170dp"
-        android:background="#006B7683"
+        android:background="?android:windowBackground"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/retroceder" />
 
@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
+            android:background="?cardBackgroundColor"
             android:padding="24dp">
 
             <TextView
@@ -40,7 +41,7 @@
                 android:textSize="36sp"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textColor="?android:textColorPrimary"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -50,9 +51,11 @@
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
                 android:hint="@string/hint3"
+                android:textColorHint="?android:textColorPrimary"
                 android:drawableStart="@drawable/person"
+                android:drawableTint="?colorOnPrimary"
                 android:drawablePadding="8dp"
-                android:textColor="@color/white"/>
+                android:textColor="?android:textColorPrimary"/>
 
             <EditText
                 android:id="@+id/login_password"
@@ -62,9 +65,11 @@
                 android:background="@drawable/custom_text"
                 android:drawableStart="@drawable/candado"
                 android:drawablePadding="8dp"
+                android:drawableTint="?colorOnPrimary"
+                android:textColorHint="?android:textColorPrimary"
                 android:hint="@string/hint4"
                 android:padding="8dp"
-                android:textColor="@color/white"
+                android:textColor="?android:textColorPrimary"
                 android:inputType="textPassword"/>
 
             <Button
@@ -74,8 +79,8 @@
                 android:id="@+id/login_btn"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                android:textColor="@color/white"
+                android:backgroundTint="?android:colorAccent"
+                android:textColor="?android:textColorPrimary"
                 app:cornerRadius = "20dp"/>
 
             <TextView
@@ -86,7 +91,7 @@
                 android:layout_gravity="center"
                 android:padding="8dp"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"
+                android:textColor="?android:textColorPrimary"
                 android:textSize="18sp"/>
 
         </LinearLayout>
@@ -100,7 +105,7 @@
         android:layout_marginBottom="40dp"
         android:layout_gravity="center_horizontal"
         android:text="@string/version_text"
-        android:textColor="@color/secondaryText"
+        android:textColor="?android:textColorPrimary"
         android:textSize="18sp" />
 
 </LinearLayout>
