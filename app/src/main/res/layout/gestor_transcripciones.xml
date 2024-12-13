@@ -23,6 +23,31 @@
 
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_audio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/sort_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By Size" />
+
+        <Button
+            android:id="@+id/sort_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By Name" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -31,74 +56,10 @@
         android:padding="10dp">
 
         <LinearLayout
+            android:id="@+id/transcription_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Ejemplo de transcripción con menú de opciones -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@color/secondCard"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <!-- Título de la transcripción -->
-
-                <!-- Botón de opciones -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:text="@string/transcripcionguardada1"
-                    android:textColor="@color/primaryText"
-                    android:textSize="16sp" />
-
-                <ImageButton
-                    android:id="@+id/btnOpcionesTranscripcion1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Opciones"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/cambiar_vista"
-                    app:tint="@color/white" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@color/secondCard"
-                android:orientation="horizontal"
-                android:padding="8dp">
-
-                <!-- Título de la transcripción -->
-
-                <!-- Botón de opciones -->
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
-                    android:text="@string/transcripcionguardada2"
-                    android:textColor="@color/primaryText"
-                    android:textSize="16sp" />
-
-                <ImageButton
-                    android:id="@+id/btnOpcionesTranscripcion2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Opciones"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/cambiar_vista"
-                    app:tint="@color/white" />
-            </LinearLayout>
-
-            <!-- Repetir este bloque para cada transcripción -->
-        </LinearLayout>
+            android:orientation="vertical"/>
     </ScrollView>
 
     <!-- Botón para agregar nueva transcripción -->
