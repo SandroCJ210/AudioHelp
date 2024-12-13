@@ -67,7 +67,7 @@
         android:paddingBottom="50dp">
 
         <ImageButton
-            android:id="@+id/CambiarVistaLoc"
+            android:id="@+id/botonFrasesGuardadas"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="50dp"
@@ -87,7 +87,7 @@
             app:tint="@color/primaryText" />
 
         <ImageButton
-            android:id="@+id/EliminarLocucion"
+            android:id="@+id/borrarLocucion"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="#00FFFFFF"

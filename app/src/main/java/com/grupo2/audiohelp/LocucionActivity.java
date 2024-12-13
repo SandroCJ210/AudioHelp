@@ -2,6 +2,7 @@ package com.grupo2.audiohelp;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.speech.tts.UtteranceProgressListener;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -34,6 +35,12 @@ public class LocucionActivity extends AppCompatActivity {
 
         // Botón de retroceso
         ImageButton retrocederButton = findViewById(R.id.Retroceder);
+
+        // Botón de frases guardadas
+        ImageButton botonFrasesGuardadas = findViewById(R.id.botonFrasesGuardadas);
+
+        // Boton de borrar locución
+        ImageButton borrarLocucion = findViewById(R.id.borrarLocucion);
 
         // Titulo
         TextView titleLocution = findViewById(R.id.titleLocution);
@@ -68,6 +75,17 @@ public class LocucionActivity extends AppCompatActivity {
             startActivity(intent);
             // Opcional: Finaliza el activity actual para no volver con el botón de retroceso
             finish();
+        });
+
+        // Botón para ver frases
+        botonFrasesGuardadas.setOnClickListener(v -> {
+            // Crear un Intent para ir a GestorFrasesActivity
+            Intent intent = new Intent(LocucionActivity.this, GestorFrasesActivity.class);
+            startActivity(intent);
+        });
+
+        borrarLocucion.setOnClickListener(v -> {
+            locutionBox.setText("");
         });
 
         textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
