@@ -14,6 +14,7 @@ public class MenuLocucionesActivity extends AppCompatActivity{
         //btnTranscription1
 
         ImageButton btnLoc = findViewById(R.id.locution_button);
+
         btnLoc.setOnClickListener(v -> {
             Intent intent = new Intent(MenuLocucionesActivity.this, LocucionActivity.class);
             startActivity(intent);

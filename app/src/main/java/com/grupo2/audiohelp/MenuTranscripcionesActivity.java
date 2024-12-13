@@ -1,14 +1,19 @@
 package com.grupo2.audiohelp;
 
 import android.content.Intent;
+import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MenuTranscripcionesActivity extends AppCompatActivity {
+import java.io.IOException;
 
+public class MenuTranscripcionesActivity extends AppCompatActivity {
+    private boolean isRecording = false;
+    private MediaRecorder recorder;
+    private String audioFilePath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,8 +21,12 @@ public class MenuTranscripcionesActivity extends AppCompatActivity {
 
         ImageButton btnTrans = findViewById(R.id.locution_button);
         btnTrans.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuTranscripcionesActivity.this, TranscripcionActivity.class);
-            startActivity(intent);
+            if (isRecording) {
+                stopRecording();
+                goToTranscriptionActivity();
+            } else {
+                startRecording();
+            }
         });
         ImageButton btnHistorial = findViewById(R.id.saved_transcriptions_icon);
         btnHistorial.setOnClickListener(w -> {
@@ -37,4 +46,35 @@ public class MenuTranscripcionesActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
     }
+
+    private void startRecording() {
+        audioFilePath = getExternalFilesDir(null) + "/audio_AudioHelp.wav";
+        recorder = new MediaRecorder();
+        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+        recorder.setOutputFile(audioFilePath);
+
+        try {
+            recorder.prepare();
+            recorder.start();
+            isRecording = true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void stopRecording() {
+        if (isRecording) {
+            recorder.stop();
+            recorder.release();
+            isRecording = false;
+        }
+    }
+    private void goToTranscriptionActivity(){
+        Intent intent = new Intent(this, TranscripcionActivity.class);
+        intent.putExtra("audioFilePath", audioFilePath);
+        startActivity(intent);
+    }
+
 }
