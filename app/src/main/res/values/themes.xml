@@ -1,6 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
-        <!-- Personaliza tu tema aquí -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#6200EE</item>
+        <item name="android:statusBarColor">@color/azul_claro</item>
     </style>
 
 </resources>

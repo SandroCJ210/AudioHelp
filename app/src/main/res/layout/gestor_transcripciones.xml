@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?android:windowBackground"
     android:orientation="vertical"
     android:padding="16dp"
     >
@@ -17,10 +17,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:padding="5pt"
         android:text="@string/title_gestor_transcriptions"
-        android:textColor="#FCF5FD"
-        android:textSize="24sp"
+        android:textColor="?android:textColorPrimary"
 
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -33,26 +34,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Button"
+            android:background="?android:colorAccent"
+            android:textColor="?android:textColorPrimary"/>
 
         <Button
             android:id="@+id/sort_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort By Size" />
+            android:text="Sort By Size"
+            android:background="?android:colorAccent"
+            android:textColor="?android:textColorPrimary"/>
 
         <Button
             android:id="@+id/sort_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort By Name" />
+            android:text="Sort By Name"
+            android:background="?android:colorAccent"
+            android:textColor="?android:textColorPrimary"/>
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/card"
+        android:background="?cardBackgroundColor"
         android:padding="10dp">
 
         <LinearLayout
@@ -70,7 +77,7 @@
         android:id="@+id/boton_AñadirTrans"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/card"
+        android:backgroundTint="?android:colorAccent"
         android:text="@string/new_transcription" />
 
     <TextView
@@ -80,6 +87,6 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="@string/version_text"
-        android:textColor="@color/secondaryText"
+        android:textColor="?android:textColorPrimary"
         android:textSize="12sp" />
 </LinearLayout>

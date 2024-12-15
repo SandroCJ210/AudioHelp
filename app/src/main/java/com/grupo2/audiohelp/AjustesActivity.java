@@ -12,22 +12,23 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AjustesActivity extends AppCompatActivity {
     private SwitchCompat switchTheme;
     private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Log.i("MENSAJE", "onCreate ejecutado");
-        // Cargar tema desde SharedPreferences
+        // Cargar tema antes de llamar a super.onCreate()
         sharedPreferences = getSharedPreferences("AppSettingsPrefs", MODE_PRIVATE);
         boolean isDarkMode = sharedPreferences.getBoolean("isDarkMode", false);
         if (isDarkMode) {
-            setTheme(R.style.DarkTheme);
+            setTheme(R.style.DarkTheme); // Tema oscuro
         } else {
-            setTheme(R.style.LightTheme);
+            setTheme(R.style.LightTheme); // Tema claro
         }
+
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.ajustes);
-        Log.i("MENSAJE", "TODO BIEN POR AHORA");
+
+        Log.i("MENSAJE", "Activity Ajustes creada");
+
         // Configurar el Switch
         switchTheme = findViewById(R.id.switch_tema);
         if (switchTheme == null) {
@@ -35,30 +36,31 @@ public class AjustesActivity extends AppCompatActivity {
         } else {
             Log.d("MENSAJE", "El Switch fue encontrado correctamente");
         }
+
         switchTheme.setChecked(isDarkMode);
         switchTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            editor = sharedPreferences.edit();
+            SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putBoolean("isDarkMode", isChecked);
             editor.apply();
+
             // Reiniciar actividad para aplicar el tema
-            recreate();
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         });
 
-        // Referencia al ImageButton
+        // Configuración del botón de atrás
         ImageButton imageButtonAtras = findViewById(R.id.ButtonAtras);
-
-        // Configuración del OnClickListener para el ImageButton
         imageButtonAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Crea un Intent para regresar al MenuOpcionesActivity
+                // Navegar de regreso a MenuOpcionesActivity
                 Intent intent = new Intent(AjustesActivity.this, MenuOpcionesActivity.class);
-                startActivity(intent);  // Inicia la actividad MenuOpcionesActivity
-                finish();  // Finaliza la actividad actual (AjustesActivity)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
-
-
     }
 }
 

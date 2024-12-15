@@ -5,7 +5,7 @@
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?android:windowBackground"
     tools:ignore="ExtraText">
 
 
@@ -14,9 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:background="#00CDD7F9"
         android:text="@string/title_transcription"
-        android:textColor="@color/primaryText"
+        android:textColor="?android:textColorPrimary"
         android:textSize="35sp" />
 
 
@@ -27,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
         android:layout_marginBottom="140dp"
-        android:background="@color/card"
+        android:background="?cardBackgroundColor"
         android:gravity="top"
         android:hint="@string/hint1"
         android:imeOptions="actionDone"
@@ -35,8 +34,8 @@
         android:overScrollMode="always"
         android:padding="8dp"
         android:scrollbars="vertical"
-        android:textColor="@color/primaryText"
-        android:textColorHint="@color/secondaryText"
+        android:textColor="?android:textColorPrimary"
+        android:textColorHint="?android:textColorSecondary"
         android:textCursorDrawable="@null"
         android:textSize="20sp" />
 
@@ -52,7 +51,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/retroceder"
-        app:tint="@color/primaryText" />
+        app:tint="?android:textColorPrimary" />
 
     <ImageButton
         android:id="@+id/Guardar_Trans"
@@ -65,7 +64,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/guardar"
-        app:tint="@color/primaryText" />
+        app:tint="?android:textColorPrimary" />
 
     <ImageButton
         android:id="@+id/pantalla_completa"
@@ -78,7 +77,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/pantalla_completa"
-        app:tint="@color/primaryText" />
+        app:tint="?android:textColorPrimary" />
 
     <ImageButton
         android:id="@+id/Borrar_Trans"
@@ -91,6 +90,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/eliminar"
-        app:tint="@color/primaryText" />
+        app:tint="?android:textColorPrimary" />
 
 </RelativeLayout>

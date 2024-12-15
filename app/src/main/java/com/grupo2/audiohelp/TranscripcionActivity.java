@@ -1,6 +1,7 @@
 package com.grupo2.audiohelp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
@@ -16,6 +17,15 @@ public class TranscripcionActivity extends AppCompatActivity {
     private static final int SPEECH_REQUEST_CODE = 10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Cargar tema antes de llamar a super.onCreate()
+        SharedPreferences sharedPreferences = getSharedPreferences("AppSettingsPrefs", MODE_PRIVATE);
+        boolean isDarkMode = sharedPreferences.getBoolean("isDarkMode", false);
+        if (isDarkMode) {
+            setTheme(R.style.DarkTheme); // Tema oscuro
+        } else {
+            setTheme(R.style.LightTheme); // Tema claro
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transcripcion);
         startSpeechToText();

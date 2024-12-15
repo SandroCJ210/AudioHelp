@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#18191A">
+    android:background="?android:windowBackground">
 
     <!-- Botón de imagen en la parte superior izquierda -->
     <ImageButton
@@ -17,7 +17,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/retroceder"
         android:layout_marginBottom="16dp"
-        app:tint="#FFFFFF" />
+        app:tint="?android:textColorPrimary" />
 
     <!-- Foto de perfil -->
     <ImageView
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="NOMBRE"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="?android:textColorPrimary"
         android:layout_gravity="center"
         android:layout_marginBottom="24dp"
         android:textStyle="bold" />
@@ -47,7 +47,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Correo Electrónico"
-        android:textColor="#FFFFFF"
+        android:textColorHint="?android:textColorPrimary"
+        android:textColor="?android:textColorPrimary"
         android:backgroundTint="#303030"
         android:padding="12dp"
         android:enabled="false"
@@ -60,7 +61,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nueva contraseña"
-        android:textColor="#FFFFFF"
+        android:textColorHint="?android:textColorPrimary"
+        android:textColor="?android:textColorPrimary"
         android:backgroundTint="#303030"
         android:padding="12dp"
         android:enabled="true"

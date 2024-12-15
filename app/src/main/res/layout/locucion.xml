@@ -5,7 +5,7 @@
     android:id="@+id/ajustes_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?android:windowBackground"
     tools:ignore="ExtraText">
 
     <!-- Título de la aplicación -->
@@ -17,15 +17,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="140dp"
         android:layout_marginBottom="64dp"
-        android:background="#334455"
-        android:backgroundTint="@color/card"
+        android:background="?cardBackgroundColor"
         android:gravity="top"
         android:imeOptions="actionDone"
         android:inputType="textMultiLine|textNoSuggestions"
         android:overScrollMode="always"
         android:padding="8dp"
         android:scrollbars="vertical"
-        android:textColor="@android:color/white"
+        android:textColor="?android:textColorPrimary"
         android:textCursorDrawable="@null"
         android:textSize="20sp" />
 
@@ -35,9 +34,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:background="#00CDD7F9"
         android:text="@string/title_locucion"
-        android:textColor="@color/title"
+        android:textColor="?android:textColorPrimary"
         android:textSize="45sp" />
 
 
@@ -55,7 +53,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:scaleType="fitCenter"
         android:src="@drawable/retroceder"
-        app:tint="@color/primaryText" />
+        app:tint="?android:textColorPrimary" />
 
 
     <LinearLayout
@@ -71,29 +69,29 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="50dp"
-            android:background="#00FFFFFF"
+            android:background="?android:windowBackground"
             android:contentDescription="@string/Phrases"
             app:srcCompat="@drawable/chat"
-            app:tint="@color/primaryText" />
+            app:tint="?android:textColorPrimary" />
 
         <ImageButton
             android:id="@+id/playLocution"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginEnd="50dp"
-            android:background="#00FFFFFF"
+            android:background="?android:windowBackground"
             android:contentDescription="@string/Play"
             app:srcCompat="@drawable/play"
-            app:tint="@color/primaryText" />
+            app:tint="?android:textColorPrimary" />
 
         <ImageButton
             android:id="@+id/borrarLocucion"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="#00FFFFFF"
+            android:background="?android:windowBackground"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/eliminar"
-            app:tint="@color/primaryText" />
+            app:tint="?android:textColorPrimary" />
     </LinearLayout>
 
 
