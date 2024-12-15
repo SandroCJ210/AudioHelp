@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="@color/background"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -35,7 +35,7 @@
             android:scaleType="fitCenter"
             android:layout_gravity="end"
             android:layout_marginTop="5dp"
-            app:srcCompat="@drawable/retroceder" />
+            android:src="@drawable/retroceder" />
     </LinearLayout>
 
     <!-- Botón para cambiar la fuente -->
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/background_dark_contenedor"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -72,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/background_dark_contenedor"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -98,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/background_dark_contenedor"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -127,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/background_dark_contenedor"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -152,7 +152,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/background_dark_contenedor"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -174,15 +174,4 @@
             />
     </LinearLayout>
 
-    <!-- Pie de página -->
-    <TextView
-        android:id="@+id/version_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/version_text"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:background="?attr/colorPrimary" />
 </LinearLayout>
