@@ -1,6 +1,7 @@
 package com.grupo2.audiohelp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.Image;
 import android.speech.tts.UtteranceProgressListener;
@@ -24,12 +25,26 @@ public class LocucionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Cargar tema antes de llamar a super.onCreate()
+        SharedPreferences sharedPreferences = getSharedPreferences("AppSettingsPrefs", MODE_PRIVATE);
+        boolean isDarkMode = sharedPreferences.getBoolean("isDarkMode", false);
+        if (isDarkMode) {
+            setTheme(R.style.DarkTheme); // Tema oscuro
+        } else {
+            setTheme(R.style.LightTheme); // Tema claro
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.locucion);
 
         // Inicializar EditText
+        String fraseTexto = getIntent().getStringExtra("FRASE_TEXTO");
         locutionBox = findViewById(R.id.locutionBox);
-
+        if (fraseTexto != null) {
+            locutionBox.setText(fraseTexto);
+        } else {
+            locutionBox.setText("");
+        }
         // Botón de reproducción
         ImageButton playButton = findViewById(R.id.playLocution);
 

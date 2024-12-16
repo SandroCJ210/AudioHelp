@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="?android:windowBackground"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/title_config"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -32,9 +32,11 @@
             android:id="@+id/ButtonAtras"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:scaleType="fitCenter"
             android:layout_gravity="end"
             android:layout_marginTop="5dp"
+            android:background="?android:windowBackground"
+            android:scaleType="fitCenter"
+            app:tint="?android:textColorPrimary"
             app:srcCompat="@drawable/retroceder" />
     </LinearLayout>
 
@@ -43,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
+        android:background="?android:windowBackground"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -52,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/font"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -62,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/font_description"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="14sp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -72,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="?android:attr/windowBackground"
+        android:background="?android:windowBackground"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -81,7 +83,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Modo Oscuro"
-            android:textColor="@color/primaryText"
+            android:background="?android:windowBackground"
+            android:textColor="?android:textColorPrimary"
             android:textStyle="bold"
             android:textSize="16sp" />
 
@@ -98,7 +101,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
+        android:background="?android:windowBackground"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -107,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/voice_change"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -117,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/voices_description"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="14sp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -127,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/windowBackground"
+        android:background="?android:windowBackground"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -136,7 +139,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/critic_sounds"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="16sp"
             android:textStyle="bold"/>
 
@@ -152,7 +155,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="?android:attr/windowBackground"
+        android:background="?android:windowBackground"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -161,7 +164,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/background_mode"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -181,8 +184,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/version_text"
-        android:textColor="@android:color/white"
+        android:textColor="?android:textColorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:background="?attr/colorPrimary" />
+        android:background="?android:windowBackground" />
 </LinearLayout>

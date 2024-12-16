@@ -30,10 +30,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
-
+    implementation("com.assemblyai:assemblyai-java:4.0.0")
+    //implementation(libs.assemblyai.java)
+    //implementation(libs.libraries.bom)
+    //implementation(libs.google.cloud.speech)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

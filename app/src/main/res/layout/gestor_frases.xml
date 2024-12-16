@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="?android:windowBackground">
 
     <!-- Título -->
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/title_gestor_frases"
-        android:textColor="@color/primaryText"
+        android:textColor="?android:textColorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +24,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewFrases"
         android:layout_width="350dp"
+        android:background="?cardBackgroundColor"
         android:layout_height="580dp"
         android:clipToPadding="false"
         android:scrollbars="vertical"
@@ -43,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:tint="@android:color/white" />
+        app:tint="?android:textColorPrimary" />
 
     <ImageButton
         android:id="@+id/buttonClose"
@@ -56,6 +57,6 @@
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/primaryText" />
+        app:tint="?android:textColorPrimary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

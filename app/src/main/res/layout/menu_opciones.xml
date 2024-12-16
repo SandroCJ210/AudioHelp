@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="?android:windowBackground"
     android:padding="16dp">
 
     <!-- Indicador de página -->
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_options"
-        android:textColor="@color/title"
+        android:textColor="?android:textColorPrimary"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/paginationIndicator"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="@string/no_registrado"
         android:textAlignment="center"
-        android:textColor="@color/primaryText"
+        android:textColor="?android:textColorPrimary"
         android:textSize="30sp"
         app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,13 +99,13 @@
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/usuario"
-            app:tint="@color/primaryText" />
+            app:tint="?android:textColorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/iniciar_sesion"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -127,13 +127,13 @@
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/libro"
-            app:tint="@color/primaryText" />
+            app:tint="?android:textColorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tutorial"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="30sp" />
     </LinearLayout>
 
@@ -155,13 +155,13 @@
             android:layout_height="38dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/engranaje"
-            app:tint="@color/primaryText" />
+            app:tint="?android:textColorPrimary" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/configuracion"
-            android:textColor="@color/primaryText"
+            android:textColor="?android:textColorPrimary"
             android:textSize="30sp" />
     </LinearLayout>
 
