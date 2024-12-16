@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 public class LocucionActivity extends AppCompatActivity {
 
     private TextToSpeech textToSpeech;
@@ -63,14 +65,24 @@ public class LocucionActivity extends AppCompatActivity {
         // Inicializar Text-to-Speech
         textToSpeech = new TextToSpeech(this, status -> {
             if (status == TextToSpeech.SUCCESS) {
-                textToSpeech.setSpeechRate(1.0f);
-                textToSpeech.setPitch(1.0f);
+                // Establecer idioma a español
+                int result = textToSpeech.setLanguage(new Locale("es", "ES"));
 
-                // Habilitar procesamiento de rangos (si es compatible)
-                Bundle params = new Bundle();
-                params.putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "TTS_SPEAKING");
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Toast.makeText(this, "Idioma no soportado en este dispositivo", Toast.LENGTH_SHORT).show();
+                } else {
+                    textToSpeech.setSpeechRate(1.0f);
+                    textToSpeech.setPitch(1.0f);
+
+                    // Habilitar procesamiento de rangos (si es compatible)
+                    Bundle params = new Bundle();
+                    params.putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "TTS_SPEAKING");
+                }
+            } else {
+                Toast.makeText(this, "Error al inicializar Text-to-Speech", Toast.LENGTH_SHORT).show();
             }
         });
+
 
         // Configurar botón de locución
         playButton.setOnClickListener(v -> {
