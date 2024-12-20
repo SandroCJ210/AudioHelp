@@ -5,12 +5,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class TranscripcionActivity extends AppCompatActivity {
@@ -57,9 +60,36 @@ public class TranscripcionActivity extends AppCompatActivity {
             ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             if (results != null && !results.isEmpty()) {
                 String recognizedText = results.get(0); // Primer resultado reconocido
-                Toast.makeText(this, "Texto reconocido: " + recognizedText, Toast.LENGTH_LONG).show();
-                // Aquí puedes manejar el texto reconocido, por ejemplo, mostrarlo en una vista o guardarlo
+
+                // Mostrar el texto reconocido en el transcriptionBox
+                EditText transcriptionBox = findViewById(R.id.transcriptionBox);
+                transcriptionBox.setText(recognizedText);
+
+                // Guardar la transcripción
+                guardarTranscripcion(recognizedText);
             }
+        }
+    }
+
+    /**
+     * Guarda la transcripción reconocida en un archivo.
+     *
+     * @param transcriptionText Texto reconocido de la transcripción.
+     */
+    private void guardarTranscripcion(String transcriptionText) {
+        try {
+            // Generar un nombre único
+            String fileName = "Transcription_" + System.currentTimeMillis() + ".audio";
+
+            // Guardar la transcripción
+            FileOutputStream fos = openFileOutput(fileName, MODE_PRIVATE);
+            fos.write(transcriptionText.getBytes());
+            fos.close();
+
+            Toast.makeText(this, "Transcripción guardada: " + fileName, Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            Toast.makeText(this, "Error al guardar la transcripción", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
         }
     }
 }
