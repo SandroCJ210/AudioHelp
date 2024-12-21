@@ -107,23 +107,6 @@ public class AjustesActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    /*
-    private void aplicarFuente(String rutaFuente) {
-        try {
-            // Cargar la fuente desde res/font
-            Typeface typeface = ResourcesCompat.getFont(this, R.font.caskaydia_mono_nerd_font); // Asegúrate de que la fuente esté en res/font
-
-            // Aplica la fuente seleccionada a todos los TextViews de la actividad
-            View rootView = findViewById(android.R.id.content);
-            aplicarFuenteEnVistas(rootView, typeface);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Error al cargar la fuente", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-     */
-
     private void aplicarFuente(String rutaFuente) {
         try {
             // Extraer solo el nombre del archivo de la ruta completa
