@@ -2,9 +2,11 @@ package com.grupo2.audiohelp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 
 public class TranscripcionActivity extends AppCompatActivity {
     private static final int SPEECH_REQUEST_CODE = 10;
+    String recognizedText = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Cargar tema antes de llamar a super.onCreate()
@@ -31,13 +34,30 @@ public class TranscripcionActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transcripcion);
-        startSpeechToText();
+
+        recognizedText = getIntent().getStringExtra("transcripcion");
+        if(recognizedText != null){
+            EditText transcriptionBox = findViewById(R.id.transcriptionBox);
+            transcriptionBox.setText(recognizedText);
+        }else startSpeechToText();
 
 
         ImageButton btnCerrar = findViewById(R.id.Retroceder);
         btnCerrar.setOnClickListener(v -> {
             Intent IT = new Intent(TranscripcionActivity.this, MenuTranscripcionesActivity.class);
             startActivity(IT);
+        });
+
+        ImageButton eraseButton = findViewById(R.id.Borrar_Trans);
+        eraseButton.setOnClickListener(v -> {
+            EditText transcriptionBox = findViewById(R.id.transcriptionBox);
+            transcriptionBox.setText("");
+            startSpeechToText();
+        });
+
+        ImageButton saveButton = findViewById(R.id.Guardar_Trans);
+        saveButton.setOnClickListener(v -> {
+            guardarTranscripcion(recognizedText);
         });
     }
     private void startSpeechToText(){
@@ -59,14 +79,14 @@ public class TranscripcionActivity extends AppCompatActivity {
             // Obtén los resultados del reconocimiento de voz
             ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             if (results != null && !results.isEmpty()) {
-                String recognizedText = results.get(0); // Primer resultado reconocido
+                recognizedText = results.get(0); // Primer resultado reconocido
 
                 // Mostrar el texto reconocido en el transcriptionBox
                 EditText transcriptionBox = findViewById(R.id.transcriptionBox);
                 transcriptionBox.setText(recognizedText);
 
                 // Guardar la transcripción
-                guardarTranscripcion(recognizedText);
+                //guardarTranscripcion(recognizedText);
             }
         }
     }

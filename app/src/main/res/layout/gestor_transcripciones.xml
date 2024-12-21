@@ -30,21 +30,13 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/save_audio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button"
-            android:background="?android:colorAccent"
-            android:textColor="?android:textColorPrimary"/>
-
-        <Button
             android:id="@+id/sort_button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort By Size"
+            android:layout_marginEnd="20dp"
             android:background="?android:colorAccent"
-            android:textColor="?android:textColorPrimary"/>
+            android:text="Sort By Size"
+            android:textColor="?android:textColorPrimary" />
 
         <Button
             android:id="@+id/sort_button"
