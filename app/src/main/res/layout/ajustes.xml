@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="?android:windowBackground"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    >
 
     <!-- Título -->
     <LinearLayout
@@ -41,33 +42,29 @@
     </LinearLayout>
 
     <!-- Botón para cambiar la fuente -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="3dp"
         android:background="?android:windowBackground"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="5dp">
 
-        <TextView
-            android:id="@+id/textTituloFuente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/font"
+        <!-- Botón grande que ocupa el resto del espacio -->
+        <Button
+            android:id="@+id/buttonCambiarFuente"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?android:windowBackground"
+            android:text="@string/change_font"
+            android:textAllCaps="false"
             android:textColor="?android:textColorPrimary"
+            android:textStyle="bold"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:gravity="start|top"
+            android:padding="8dp" />
 
-        <TextView
-            android:id="@+id/textDescripcionFuente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/font_description"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="14sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <!-- Switch para cambiar Tema -->
     <LinearLayout
@@ -86,7 +83,7 @@
             android:background="?android:windowBackground"
             android:textColor="?android:textColorPrimary"
             android:textStyle="bold"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switch_tema"
@@ -140,7 +137,7 @@
             android:layout_weight="1"
             android:text="@string/critic_sounds"
             android:textColor="?android:textColorPrimary"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.SwitchCompat
@@ -165,7 +162,7 @@
             android:layout_weight="1"
             android:text="@string/background_mode"
             android:textColor="?android:textColorPrimary"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.SwitchCompat

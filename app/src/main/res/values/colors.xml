@@ -11,6 +11,7 @@
     <color name="secondaryText">#B0B3B8</color>
     <color name="secondCard">#3A3B3C</color>
     <color name="title">#FFFFFF</color>
+    <color name="button">#009688</color>
 
     <color name="background_dark">#18191A</color>
     <color name="background_light">#FFFFFF</color>

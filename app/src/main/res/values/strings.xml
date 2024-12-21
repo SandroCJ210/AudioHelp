@@ -29,6 +29,7 @@
     <string name = "transcripcion">Transcripción</string>
     <!-- titulos botones -->
     <string name="font">Fuente</string>
+    <string name="change_font">Cambiar fuente</string>
     <string name="voice_change">Cambiar voz</string>
     <string name="temas">Color y Tema</string>
     <string name="background_mode">Segundo Plano</string>
