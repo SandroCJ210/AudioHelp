@@ -20,6 +20,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -58,22 +59,6 @@ public class GestorTranscripcionesActivity extends AppCompatActivity {
             displaySortedTranscriptions();
         });
 
-        Button saveAudioButton = findViewById(R.id.save_audio_button);
-        saveAudioButton.setOnClickListener(v -> {
-            try {
-                // Create dummy audio data for testing
-                String name = "TestAudio";
-                byte[] audioData = "This is dummy audio data".getBytes();
-                Transcription transcription = new Transcription(name, audioData);
-                saveTranscription(transcription);
-                Log.d("SaveAudio", "Audio saved successfully: " + name);
-
-                // Refresh the UI
-                displaySortedTranscriptions();
-            } catch (IOException e) {
-                Log.e("SaveAudio", "Error saving audio", e);
-            }
-        });
 
         Button sortBySizeButton = findViewById(R.id.sort_button2);
 
@@ -87,7 +72,6 @@ public class GestorTranscripcionesActivity extends AppCompatActivity {
 
     private void displaySortedTranscriptions() {
         File directory = getFilesDir();
-        Log.d("GestorActivity", getFilesDir().toString());
         File[] files = directory.listFiles((dir, name) -> name.endsWith(".audio"));
         if (files == null || files.length == 0) return;
 
@@ -119,18 +103,25 @@ public class GestorTranscripcionesActivity extends AppCompatActivity {
             View itemView = inflater.inflate(R.layout.transcription_item, transcriptionLayout, false);
 
             // Customize the content
-            TextView textView = itemView.findViewById(R.id.transcription_title);
+            Button transcriptionButton = itemView.findViewById(R.id.transcription_title);
             ImageButton optionsButton = itemView.findViewById(R.id.btnOpcionesTranscripcion2);
 
             // Set the title and
             String displayName = file.getName().replace(".audio", "");
-            textView.setText(file.getName() + " (Size: " + file.length() + " bytes)");
+            transcriptionButton.setText(file.getName() + " (Size: " + file.length() + " bytes)");
 
             // Set a click listener for the options button
             optionsButton.setOnClickListener(v -> {
                 // Call deleteTranscription when the options button is clicked
                 deleteTranscription(displayName);
                 displaySortedTranscriptions();
+            });
+
+            transcriptionButton.setOnClickListener(v -> {
+                Intent intent = new Intent(GestorTranscripcionesActivity.this, TranscripcionActivity.class);
+                String text = obtenerTranscripcion(file.getName());
+                intent.putExtra("transcripcion",text);
+                startActivity(intent);
             });
 
             // Add the item to the parent layout
@@ -161,23 +152,32 @@ public class GestorTranscripcionesActivity extends AppCompatActivity {
     /**
      * Retrieves the audio data of a transcription by its name.
      *
-     * @param name The name of the transcription.
+     * @param fileName The name of the transcription.
      * @return A byte array containing the audio data, or null if the file is not found.
      * @throws IOException If an error occurs during file reading.
      */
-    public byte[] getAudioByName(String name) throws IOException {
-        String fileName = name + ".audio";
-        File file = new File(getFilesDir(), fileName);
+    private String obtenerTranscripcion(String fileName) {
+        try {
+            // Abrir el archivo desde el almacenamiento interno
+            FileInputStream fis = openFileInput(fileName);
 
-        if (!file.exists()) {
-            return null; // File does not exist
+            // Leer el contenido del archivo
+            StringBuilder stringBuilder = new StringBuilder();
+            int content;
+            while ((content = fis.read()) != -1) {
+                stringBuilder.append((char) content);
+            }
+
+            // Cerrar el archivo
+            fis.close();
+
+            // Retornar el contenido como texto
+            return stringBuilder.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Error al leer la transcripción", Toast.LENGTH_SHORT).show();
+            return null; // Retorna null si ocurre un error
         }
-
-        FileInputStream fis = new FileInputStream(file);
-        byte[] audioData = new byte[(int) file.length()];
-        fis.read(audioData);
-        fis.close();
-        return audioData;
     }
 
     /**

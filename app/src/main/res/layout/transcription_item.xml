@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="8dp"
-    android:background="?cardBackgroundColor"
     android:orientation="horizontal"
     android:padding="8dp">
 
     <!-- Título de la transcripción -->
-    <TextView
+    <Button
         android:id="@+id/transcription_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
         android:layout_weight="1"
-        android:text="@string/transcripcionguardada2"
-        android:textColor="?android:textColorPrimary"
-        android:textSize="16sp" />
+        android:backgroundTint="@color/card_dark"
+        android:text="Transcripción 2"
+        android:textColor="?android:textColorPrimary" />
 
     <!-- Botón de opciones -->
     <ImageButton
@@ -28,5 +27,7 @@
         android:contentDescription="Opciones"
         android:scaleType="centerInside"
         android:src="@drawable/eliminar"
-        app:tint="?colorOnPrimary" />
+        app:tint="?colorOnPrimary"
+        tools:layout_gravity="center" />
+
 </LinearLayout>
